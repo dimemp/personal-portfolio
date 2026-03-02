@@ -13,6 +13,7 @@
 	--bs-body-line-height: 1.6;
 	--bs-body-color: #4F4F4F;
 	--bs-body-bg: #FCFBFB;
+	--dd-bg-dark: #f5f3f1;
 	--bs-border-radius: 0.5rem;
 	--bs-border-radius-sm: 0.25rem;
 	--bs-border-radius-lg: 0.75rem;
@@ -167,6 +168,51 @@ a:focus-visible {
 .py-7 {
 	padding-top: 4.5rem!important;
 	padding-bottom: 4.5rem!important;
+}
+
+/* --- Project image column & wrapper --- */
+
+.project-split-row .col-lg-6.px-0 {
+	display: flex;
+	flex-direction: column;
+}
+
+.project-split-row .col-lg-6.px-0 > .split-card-body {
+	flex: 1;
+	display: flex;
+}
+
+.project-img-wrap {
+	position: relative;
+	overflow: hidden;
+	flex: 1;
+}
+
+.project-img-wrap img,
+.project-img-wrap video {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* --- Grayscale rows (logos + media) --- */
+
+.project-split-row img,
+.project-split-row video {
+	filter: grayscale(100%);
+	transition: filter 0.4s ease;
+}
+
+.project-split-row:hover img,
+.project-split-row:hover video {
+	filter: grayscale(0%);
+}
+
+.project-split-row {
+	cursor: pointer;
 }
 
 /* --- Content bands (vertical rails + top rule) --- */
@@ -356,6 +402,7 @@ a:focus-visible {
 }
 
 @media (min-width: 992px) {
+
 	.split-card {
 		min-height: 40rem;
 	}
@@ -368,6 +415,7 @@ a:focus-visible {
 	.split-card.is-dimmed .split-card-body {
 		opacity: 0.5;
 	}
+
 }
 
 .split-card-rule {
@@ -497,7 +545,6 @@ a:focus-visible {
 .portrait-wrap .portrait-img {
 	display: block;
 	width: 100%;
-	border-radius: 12px;
 }
 
 .portrait-half {
@@ -508,17 +555,14 @@ a:focus-visible {
 	width: 50%;
 	z-index: 1;
 	transition: opacity 1s ease;
-	border-radius: 12px;
 }
 
 .portrait-half--left {
 	left: 0;
-	border-radius: 12px 0 0 12px;
 }
 
 .portrait-half--right {
 	right: 0;
-	border-radius: 0 12px 12px 0;
 }
 
 .portrait-half.is-dimmed {
@@ -527,6 +571,7 @@ a:focus-visible {
 }
 
 @media (min-width: 992px) {
+
 	.portrait-wrap {
 		position: absolute;
 		top: 35%;
@@ -536,17 +581,18 @@ a:focus-visible {
 		margin: 0;
 		order: unset;
 	}
+	
 }
 
-/* --- Community split-row mobile separators --- */
+/* --- Project split-row mobile separators --- */
 
 @media (min-width: 992px) {
 
-	.community-split-row .split-card-rule {
+	.project-split-row .split-card-rule {
 		display: none;
 	}
 
-	.community-split-row + .community-split-row::before {
+	.project-split-row + .project-split-row::before {
 		content: "";
 		position: absolute;
 		top: 0;

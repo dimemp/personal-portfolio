@@ -104,6 +104,21 @@ $(function () {
 		openModal(idx);
 	});
 
+	$('.project-split-row').on('click', function (e) {
+		if ($(e.target).closest('a, button').length) return;
+		var idx = parseInt($(this).data('project'), 10);
+		if (!isNaN(idx)) openModal(idx);
+	});
+
+	$('.project-split-row').on('mouseenter', function () {
+		$(this).find('video').each(function () { this.play(); });
+	}).on('mouseleave', function () {
+		$(this).find('video').each(function () {
+			this.pause();
+			this.currentTime = 0;
+		});
+	});
+
 	$('#projectModalClose').on('click', closeModal);
 
 	$overlay.on('click', function (e) {

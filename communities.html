@@ -78,18 +78,18 @@
 							<img class="img-fluid bg-white rounded-2" src="imgs/communities/startup_universe_logo.jpg" alt="Startup Universe logo" width="40px" height="40px">
 							<img class="img-fluid rounded-2" src="imgs/communities/greektech_logo.jpg" alt="GreekTech logo" width="40px" height="40px">
 						</div>
-						<h6 class="fs-09 text-muted">Nov 2012 - Jun 2015</h6>
-						<h4 class="mb-2">Founding member ThinkBiz</h4>
-						<p>ThinkBiz is the first Student Entrepreneurship Club of Greece founded with the goal to enhance the entrepreneurial spirit of students.</p>
+						<h6 class="fs-09 text-muted">Mar 2019 - Present</h6>
+						<h4 class="mb-2">Leading positions in various tech startup communities</h4>
+						<p>I've held various leadership positions in various tech startup communities, including French Tech Athens, Sigma Squared, Startup Universe, and GreekTech.</p>
 						<a class="btn btn-outline-primary btn-learn-more" href="#" data-project="0"><i class="bi bi-arrow-up-right me-2"></i>Learn more</a>
 					</div>
 				</div>
-				<div class="col-12 col-lg-6 px-0">
+				<div class="col-12 col-lg-6 px-0 d-flex flex-column">
 					<span class="split-card-rule"></span>
 					<span class="split-card-dot split-card-dot--start"><span class="dot-ring"><span class="dot-fill"></span></span></span>
 					<span class="split-card-dot split-card-dot--end"><span class="dot-ring"><span class="dot-fill"></span></span></span>
-					<div class="split-card-body">
-					<div class="project-img-wrap">
+					<div class="split-card-body flex-fill d-flex">
+					<div class="project-img-wrap position-relative overflow-hidden flex-fill">
 						<img src="imgs/communities/french_tech_athens_group_image.webp" alt="French Tech Athens team">
 					</div>
 					</div>
@@ -113,18 +113,18 @@
 						<div class="mb-3">
 							<img class="img-fluid rounded-2" src="imgs/communities/mindspace_logo.jpg" alt="MindSpace logo" width="40px" height="40px">
 						</div>
-						<h6 class="fs-09 text-muted">Nov 2012 - Jun 2015</h6>
-						<h4 class="mb-2">Founding member ThinkBiz</h4>
-						<p>ThinkBiz is the first Student Entrepreneurship Club of Greece founded with the goal to enhance the entrepreneurial spirit of students.</p>
+						<h6 class="fs-09 text-muted">Nov 2014 - Jul 2017</h6>
+						<h4 class="mb-2">Founding member Mindspace</h4>
+						<p>Mindspace is a nonprofit organization that cultivates the entrepreneurial mentality in Higher Education students and young alumni.</p>
 						<a class="btn btn-outline-primary btn-learn-more" href="#" data-project="1"><i class="bi bi-arrow-up-right me-2"></i>Learn more</a>
 					</div>
 				</div>
-				<div class="col-12 col-lg-6 px-0">
+				<div class="col-12 col-lg-6 px-0 d-flex flex-column">
 					<span class="split-card-rule"></span>
 					<span class="split-card-dot split-card-dot--start"><span class="dot-ring"><span class="dot-fill"></span></span></span>
 					<span class="split-card-dot split-card-dot--end"><span class="dot-ring"><span class="dot-fill"></span></span></span>
-					<div class="split-card-body">
-					<div class="project-img-wrap">
+					<div class="split-card-body flex-fill d-flex">
+					<div class="project-img-wrap position-relative overflow-hidden flex-fill">
 						<img src="imgs/communities/mindspace_group_image.webp" alt="Mindspace team">
 					</div>
 					</div>
@@ -154,12 +154,12 @@
 						<a class="btn btn-outline-primary btn-learn-more" href="#" data-project="2"><i class="bi bi-arrow-up-right me-2"></i>Learn more</a>
 					</div>
 				</div>
-				<div class="col-12 col-lg-6 px-0">
+				<div class="col-12 col-lg-6 px-0 d-flex flex-column">
 					<span class="split-card-rule"></span>
 					<span class="split-card-dot split-card-dot--start"><span class="dot-ring"><span class="dot-fill"></span></span></span>
 					<span class="split-card-dot split-card-dot--end"><span class="dot-ring"><span class="dot-fill"></span></span></span>
-					<div class="split-card-body">
-					<div class="project-img-wrap">
+					<div class="split-card-body flex-fill d-flex">
+					<div class="project-img-wrap position-relative overflow-hidden flex-fill">
 						<img src="imgs/communities/Thinkbiz_group_image.jpg" alt="ThinkBiz team">
 					</div>
 					</div>
@@ -177,28 +177,33 @@
 		</main>
 
 		<!-- Project Modal -->
-		<div class="project-modal-overlay" id="projectModalOverlay">
-			<div class="project-modal" id="projectModal">
-				<div class="project-modal-handle d-lg-none">
+		<div class="project-modal-overlay d-flex align-items-end justify-content-center" id="projectModalOverlay">
+
+			<div class="project-modal d-flex flex-column overflow-hidden" id="projectModal">
+
+				<div class="project-modal-handle d-flex justify-content-center d-lg-none">
 					<span class="handle-bar"></span>
 				</div>
-				<button class="project-modal-close" id="projectModalClose" aria-label="Close modal">
+
+				<button class="project-modal-close position-absolute bg-white top-0 end-0 m-3 d-flex align-items-center justify-content-center rounded-circle border" id="projectModalClose" aria-label="Close modal">
 					<i class="bi bi-x-lg"></i>
 				</button>
-				<div class="project-modal-nav project-modal-nav--prev" id="projectModalPrev" aria-label="Previous project">
-					<i class="bi bi-chevron-left"></i>
+
+				<div class="project-modal-nav-bar position-absolute bottom-0 start-50 translate-middle-x d-flex align-items-center flex-shrink-0 bg-white border shadow-sm rounded-pill py-2 px-3 mb-4">
+					<button class="btn btn-outline-primary project-modal-nav--prev border-0 py-1 px-2 text-nowrap flex-shrink-0" id="projectModalPrev" type="button" aria-label="Previous project">
+						<i class="bi bi-arrow-left-square me-2"></i>Previous
+					</button>
+					<button class="btn btn-outline-primary project-modal-nav--next border-0 py-1 px-2 ms-3 text-nowrap flex-shrink-0" id="projectModalNext" type="button" aria-label="Next project">
+						Next<i class="bi bi-arrow-right-square ms-2"></i>
+					</button>
 				</div>
-				<div class="project-modal-nav project-modal-nav--next" id="projectModalNext" aria-label="Next project">
-					<i class="bi bi-chevron-right"></i>
+
+				<div class="project-modal-content d-flex flex-column overflow-auto flex-fill px-3 pb-5 px-lg-5 mt-3 mt-lg-5">
+					<div class="col-12 col-lg-8 col-xl-6 pb-5 mx-auto" id="js-project-modal-content"></div>
 				</div>
-				<div class="project-modal-content" id="projectModalContent">
-					<div class="project-modal-main">
-						<div class="project-modal-hero" id="projectModalHero"></div>
-						<div class="project-modal-text" id="projectModalText"></div>
-					</div>
-					<aside class="project-modal-sidebar" id="projectModalSidebar"></aside>
-				</div>
+
 			</div>
+
 		</div>
 
 		<footer class="container">
@@ -228,6 +233,7 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/communities-modal-content.js"></script>
 	<script src="js/script.js"></script>
 		
 	</body>

@@ -3,88 +3,24 @@ $(function () {
 	// Update the year in the footer
 	$('#year').text(new Date().getFullYear());
 
-	/* =========================================================
-	   Community project modal (Dribbble-style)
-	   ========================================================= */
-
-	var communityProjects = [
-		{
-			title: 'Founding member ThinkBiz',
-			date: 'Nov 2012 - Jun 2015',
-			image: 'imgs/thinkbiz/thinkbiz_team.png',
-			imageAlt: 'ThinkBiz team',
-			description: '<p>ThinkBiz is the first Student Entrepreneurship Club of Greece founded with the goal to enhance the entrepreneurial spirit of students.</p><p>As a founding member, I helped shape the organization from the ground up, building a community of ambitious students who wanted to turn their ideas into real ventures. We organized workshops, hackathons, and mentorship programs that connected students with industry leaders.</p>',
-			website: 'https://thinkbiz.gr',
-			websiteLabel: 'thinkbiz.gr',
-			role: 'Founding Member',
-			tags: ['Community', 'Entrepreneurship', 'Education']
-		},
-		{
-			title: 'Founding member ThinkBiz',
-			date: 'Nov 2012 - Jun 2015',
-			image: 'imgs/thinkbiz/thinkbiz_team.png',
-			imageAlt: 'ThinkBiz team',
-			description: '<p>ThinkBiz is the first Student Entrepreneurship Club of Greece founded with the goal to enhance the entrepreneurial spirit of students.</p><p>As a founding member, I helped shape the organization from the ground up, building a community of ambitious students who wanted to turn their ideas into real ventures.</p>',
-			website: 'https://thinkbiz.gr',
-			websiteLabel: 'thinkbiz.gr',
-			role: 'Founding Member',
-			tags: ['Community', 'Entrepreneurship', 'Education']
-		},
-		{
-			title: 'Founding member ThinkBiz',
-			date: 'Nov 2012 - Jun 2015',
-			image: 'imgs/thinkbiz/thinkbiz_team.png',
-			imageAlt: 'ThinkBiz team',
-			description: '<p>ThinkBiz is the first Student Entrepreneurship Club of Greece founded with the goal to enhance the entrepreneurial spirit of students.</p><p>As a founding member, I helped shape the organization from the ground up, building a community of ambitious students who wanted to turn their ideas into real ventures.</p>',
-			website: 'https://thinkbiz.gr',
-			websiteLabel: 'thinkbiz.gr',
-			role: 'Founding Member',
-			tags: ['Community', 'Entrepreneurship', 'Education']
-		}
-	];
-
+	//--- Project modal ---
 	var currentProjectIndex = 0;
 	var $overlay = $('#projectModalOverlay');
 	var $modal = $('#projectModal');
 	var $prevBtn = $('#projectModalPrev');
 	var $nextBtn = $('#projectModalNext');
+	var $modalContent = $('#js-project-modal-content');
+	var hasCommunitiesContent = typeof window.communitiesModalContent !== 'undefined' && window.communitiesModalContent.length;
 
 	function renderProject(index) {
-		var p = communityProjects[index];
 		currentProjectIndex = index;
-
-		$('#projectModalHero').html(
-			'<img src="' + p.image + '" alt="' + p.imageAlt + '">'
-		);
-
-		$('#projectModalText').html(
-			'<h6 class="fs-09 text-muted">' + p.date + '</h6>' +
-			'<h3>' + p.title + '</h3>' +
-			p.description
-		);
-
-		var tagsHtml = '';
-		if (p.tags && p.tags.length) {
-			tagsHtml = '<div class="sidebar-tags">';
-			for (var i = 0; i < p.tags.length; i++) {
-				tagsHtml += '<span class="sidebar-tag">' + p.tags[i] + '</span>';
+		if (hasCommunitiesContent && $modalContent.length) {
+			var content = window.communitiesModalContent[index];
+			if (content) {
+				$modalContent.html(content);
 			}
-			tagsHtml += '</div>';
 		}
-
-		$('#projectModalSidebar').html(
-			'<div class="sidebar-card">' +
-				'<h6>Role</h6>' +
-				'<p>' + p.role + '</p>' +
-			'</div>' +
-			'<div class="sidebar-card">' +
-				'<h6>Website</h6>' +
-				'<a href="' + p.website + '" target="_blank"><i class="bi bi-arrow-up-right me-1"></i>' + p.websiteLabel + '</a>' +
-			'</div>' +
-			(tagsHtml ? '<div class="sidebar-card"><h6>Tags</h6>' + tagsHtml + '</div>' : '')
-		);
-
-		$('#projectModalContent').scrollTop(0);
+		$('.project-modal-content').scrollTop(0);
 	}
 
 	function openModal(index) {
@@ -101,13 +37,13 @@ $(function () {
 	$('.btn-learn-more').on('click', function (e) {
 		e.preventDefault();
 		var idx = parseInt($(this).data('project'), 10);
-		openModal(idx);
+		if (hasCommunitiesContent && !isNaN(idx)) openModal(idx);
 	});
 
 	$('.project-split-row').on('click', function (e) {
 		if ($(e.target).closest('a, button').length) return;
 		var idx = parseInt($(this).data('project'), 10);
-		if (!isNaN(idx)) openModal(idx);
+		if (hasCommunitiesContent && !isNaN(idx)) openModal(idx);
 	});
 
 	$('.project-split-row').on('mouseenter', function () {
@@ -126,12 +62,16 @@ $(function () {
 	});
 
 	function prevProject() {
-		var idx = (currentProjectIndex - 1 + communityProjects.length) % communityProjects.length;
+		if (!hasCommunitiesContent) return;
+		var len = window.communitiesModalContent.length;
+		var idx = (currentProjectIndex - 1 + len) % len;
 		renderProject(idx);
 	}
 
 	function nextProject() {
-		var idx = (currentProjectIndex + 1) % communityProjects.length;
+		if (!hasCommunitiesContent) return;
+		var len = window.communitiesModalContent.length;
+		var idx = (currentProjectIndex + 1) % len;
 		renderProject(idx);
 	}
 

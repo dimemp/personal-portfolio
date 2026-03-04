@@ -206,6 +206,169 @@ a:focus-visible {
 	cursor: pointer;
 }
 
+/* --- Tech logos section --- */
+
+.tech-logos-section {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.tech-logos-title-rule {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.tech-logos-title-rule .title-rule-line {
+	flex: 1;
+	height: 0.75px;
+	background: var(--dd-overlay);
+}
+
+.tech-logos-title-rule .dot-ring {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: var(--dd-surface);
+	flex-shrink: 0;
+}
+
+.tech-logos-title-rule .dot-fill {
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: var(--dd-ink);
+}
+
+/* --- Category boxes --- */
+
+.tech-logos-box {
+	position: relative;
+	padding-bottom: 1.5rem;
+}
+
+.tech-logos-box--horizontal {
+	padding-bottom: 1rem;
+}
+
+.tech-logos-bottom-row {
+	margin-top: 0.5rem;
+}
+
+@media (min-width: 992px) {
+	.tech-logos-box:not(.tech-logos-box--horizontal) {
+		border-left: 1px solid var(--dd-overlay);
+	}
+
+	.tech-logos-bottom-row .tech-logos-box:last-child {
+		border-right: 1px solid var(--dd-overlay);
+	}
+}
+
+@media (max-width: 991.98px) {
+	.tech-logos-bottom-row .tech-logos-box + .tech-logos-box {
+		margin-top: 0.5rem;
+	}
+}
+
+.tech-logos-box-rule {
+	display: none;
+}
+
+.tech-logos-box-dot {
+	display: none;
+}
+
+@media (min-width: 992px) {
+	.tech-logos-box-rule {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 0.75px;
+		background: var(--dd-overlay);
+	}
+
+	.tech-logos-box-dot {
+		display: block;
+		position: absolute;
+		top: 0;
+		z-index: 2;
+	}
+
+	.tech-logos-box-dot--start {
+		left: 0;
+		transform: translate(-50%, -50%);
+	}
+
+	.tech-logos-box-dot--end {
+		right: 0;
+		transform: translate(50%, -50%);
+	}
+
+	.tech-logos-box-dot .dot-ring {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		background: var(--dd-surface);
+	}
+
+	.tech-logos-box-dot .dot-fill {
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: var(--dd-ink);
+	}
+}
+
+/* --- Logo grid --- */
+
+.tech-logos-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.tech-logos-grid--5-cols {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.tech-logos-grid--horizontal {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+@media (min-width: 768px) {
+	.tech-logos-grid--horizontal {
+		grid-template-columns: repeat(8, 1fr);
+	}
+}
+
+.tech-logo-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1.25rem 0.75rem;
+	min-height: 64px;
+}
+
+.tech-logo-item img {
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+	filter: grayscale(100%) opacity(0.35);
+	transition: filter 0.3s ease;
+}
+
+.tech-logo-item:hover img {
+	filter: grayscale(0%) opacity(1);
+}
+
 /* --- Content bands (vertical rails + top rule) --- */
 
 .band {

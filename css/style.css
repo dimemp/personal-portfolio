@@ -34,6 +34,26 @@
 	--dd-gap-y-lg: 5rem;
 }
 
+/* --- Shared dot pattern --- */
+
+.dot-ring {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: var(--dd-surface);
+	flex-shrink: 0;
+}
+
+.dot-fill {
+	width: 0.125rem;
+	height: 0.125rem;
+	border-radius: 50%;
+	background: var(--dd-ink);
+}
+
 /* --- Typography --- */
 
 h1, .h1 {
@@ -52,7 +72,6 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	font-size: 1.25rem;
 	font-weight: 400;
 	color: var(--dd-heading);
 	line-height: 1.3;
@@ -67,7 +86,7 @@ h4, .h4 {
 
 h6, .h6 {
 	font-size: 1rem;
-	font-weight: 400;
+	font-weight: 500;
 	color: var(--dd-heading);
 	line-height: 1.3;
 }
@@ -225,24 +244,6 @@ a:focus-visible {
 	background: var(--dd-overlay);
 }
 
-.tech-logos-title-rule .dot-ring {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 14px;
-	height: 14px;
-	border-radius: 50%;
-	background: var(--dd-surface);
-	flex-shrink: 0;
-}
-
-.tech-logos-title-rule .dot-fill {
-	width: 4px;
-	height: 4px;
-	border-radius: 50%;
-	background: var(--dd-ink);
-}
-
 /* --- Category boxes --- */
 
 .tech-logos-box {
@@ -250,81 +251,56 @@ a:focus-visible {
 	padding-bottom: 1.5rem;
 }
 
-.tech-logos-box--horizontal {
-	padding-bottom: 1rem;
-}
-
-.tech-logos-bottom-row {
+.tech-logos-column .tech-logos-box + .tech-logos-box {
 	margin-top: 0.5rem;
 }
 
 @media (min-width: 992px) {
-	.tech-logos-box:not(.tech-logos-box--horizontal) {
+	.tech-logos-column {
 		border-left: 1px solid var(--dd-overlay);
-	}
-
-	.tech-logos-bottom-row .tech-logos-box:last-child {
-		border-right: 1px solid var(--dd-overlay);
-	}
-}
-
-@media (max-width: 991.98px) {
-	.tech-logos-bottom-row .tech-logos-box + .tech-logos-box {
-		margin-top: 0.5rem;
+		overflow: visible;
 	}
 }
 
 .tech-logos-box-rule {
-	display: none;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 0.75px;
+	background: var(--dd-overlay);
 }
 
 .tech-logos-box-dot {
-	display: none;
+	display: block;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+}
+
+.tech-logos-box-dot--start {
+	left: 0;
+	transform: translate(-50%, -50%);
+}
+
+.tech-logos-box-dot--end {
+	right: 0;
+	transform: translate(50%, -50%);
 }
 
 @media (min-width: 992px) {
-	.tech-logos-box-rule {
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		height: 0.75px;
-		background: var(--dd-overlay);
+	.tech-logos-column .tech-logos-box-rule {
+		left: calc(-1 * var(--bs-gutter-x, 1.5rem) / 2);
+		right: calc(-1 * var(--bs-gutter-x, 1.5rem) / 2);
 	}
 
-	.tech-logos-box-dot {
-		display: block;
-		position: absolute;
-		top: 0;
-		z-index: 2;
+	.tech-logos-column .tech-logos-box-dot--start {
+		left: calc(-1 * var(--bs-gutter-x, 1.5rem) / 2);
 	}
 
-	.tech-logos-box-dot--start {
-		left: 0;
-		transform: translate(-50%, -50%);
-	}
-
-	.tech-logos-box-dot--end {
-		right: 0;
-		transform: translate(50%, -50%);
-	}
-
-	.tech-logos-box-dot .dot-ring {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 14px;
-		height: 14px;
-		border-radius: 50%;
-		background: var(--dd-surface);
-	}
-
-	.tech-logos-box-dot .dot-fill {
-		width: 4px;
-		height: 4px;
-		border-radius: 50%;
-		background: var(--dd-ink);
+	.tech-logos-column .tech-logos-box-dot--end {
+		right: calc(-1 * var(--bs-gutter-x, 1.5rem) / 2);
 	}
 }
 
@@ -335,18 +311,8 @@ a:focus-visible {
 	grid-template-columns: repeat(3, 1fr);
 }
 
-.tech-logos-grid--5-cols {
-	grid-template-columns: repeat(5, 1fr);
-}
-
-.tech-logos-grid--horizontal {
-	grid-template-columns: repeat(5, 1fr);
-}
-
-@media (min-width: 768px) {
-	.tech-logos-grid--horizontal {
-		grid-template-columns: repeat(8, 1fr);
-	}
+.tech-logos-grid--4-cols {
+	grid-template-columns: repeat(4, 1fr);
 }
 
 .tech-logo-item {
@@ -363,6 +329,12 @@ a:focus-visible {
 	object-fit: contain;
 	filter: grayscale(100%) opacity(0.35);
 	transition: filter 0.3s ease;
+}
+
+.tech-logo-item[data-name="Asana"] img,
+.tech-logo-item[data-name="GitHub"] img {
+	width: 35px;
+	height: 35px;
 }
 
 .tech-logo-item:hover img {
@@ -436,23 +408,6 @@ a:focus-visible {
 .band-dot--end {
 	right: 0;
 	transform: translate(50%, -50%);
-}
-
-.band-dot .dot-ring {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 14px;
-	height: 14px;
-	border-radius: 50%;
-	background: var(--dd-surface);
-}
-
-.band-dot .dot-fill {
-	width: 4px;
-	height: 4px;
-	border-radius: 50%;
-	background: var(--dd-ink);
 }
 
 /* --- Block sections --- */
@@ -608,23 +563,6 @@ a:focus-visible {
 	transform: translate(50%, -50%);
 }
 
-.split-card-dot .dot-ring {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 14px;
-	height: 14px;
-	border-radius: 50%;
-	background: var(--dd-surface);
-}
-
-.split-card-dot .dot-fill {
-	width: 4px;
-	height: 4px;
-	border-radius: 50%;
-	background: var(--dd-ink);
-}
-
 /* --- Vertical divider (lg+ only) --- */
 
 .split-divider {
@@ -663,23 +601,6 @@ a:focus-visible {
 	border-radius: 50%;
 	background: var(--dd-surface);
 	flex-shrink: 0;
-}
-
-.split-dot .dot-ring {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 14px;
-	height: 14px;
-	border-radius: 50%;
-	background: var(--dd-surface);
-}
-
-.split-dot .dot-fill {
-	width: 4px;
-	height: 4px;
-	border-radius: 50%;
-	background: var(--dd-ink);
 }
 
 /* --- Portrait --- */

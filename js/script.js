@@ -55,11 +55,17 @@ $(function () {
 		if (hasProjectModalContent && !isNaN(idx)) openModal(idx);
 	});
 
-	// Hover on row: play video in that row; leave: pause and reset
+	// Hover on row: play video after ~1s delay; leave: cancel or pause and reset
 	$('.project-split-row').on('mouseenter', function () {
-		$(this).find('video').each(function () { this.play(); });
+		var $row = $(this);
+		$row.data('videoPlayTimeout', setTimeout(function () {
+			$row.find('video').each(function () { this.play(); });
+		}, 1000));
 	}).on('mouseleave', function () {
-		$(this).find('video').each(function () {
+		var $row = $(this);
+		clearTimeout($row.data('videoPlayTimeout'));
+		$row.removeData('videoPlayTimeout');
+		$row.find('video').each(function () {
 			this.pause();
 			this.currentTime = 0;
 		});

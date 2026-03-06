@@ -11,20 +11,20 @@
 	--bs-body-font-size: 1rem;
 	--bs-body-font-weight: 400;
 	--bs-body-line-height: 1.6;
-	--bs-body-color: #4F4F4F;
-	--bs-body-bg: #FCFBFB;
+	--bs-body-color: #717171;
+	--bs-body-bg: #FBFBFB;
 	--dd-bg-dark: #f5f3f1;
 	--bs-border-radius: 0.5rem;
 	--bs-border-radius-sm: 0.25rem;
 	--bs-border-radius-lg: 0.75rem;
 	--dd-ink: #0A0A0A;
-	--dd-surface: #FCFBFB;
+	--dd-surface: #FBFBFB;
 	--dd-muted: #F0F0EF;
 	--dd-subtle: #E2E1E0;
 	--dd-border: #D5D4D3;
 	--dd-dim: #B8B7B6;
 	--dd-faded: #737271;
-	--dd-body: #4F4F4F;
+	--dd-body: #717171;
 	--dd-strong: #3A3A39;
 	--dd-heading: #262625;
 	--dd-overlay: rgba(10, 10, 10, 0.05);
@@ -58,28 +58,28 @@
 
 h1, .h1 {
 	font-size: 2.5rem;
-	font-weight: 400;
+	font-weight: 500;
 	color: var(--dd-ink);
 	letter-spacing: -0.025em;
 	line-height: 1.15;
 }
 
 h2, .h2 {
-	font-weight: 400;
+	font-weight: 500;
 	color: var(--dd-ink);
 	letter-spacing: -0.02em;
 	line-height: 1.2;
 }
 
 h3, .h3 {
-	font-weight: 400;
+	font-weight: 500;
 	color: var(--dd-heading);
 	line-height: 1.3;
 }
 
 h4, .h4 {
 	font-size: 1.125rem;
-	font-weight: 400;
+	font-weight: 500;
 	color: var(--dd-heading);
 	line-height: 1.35;
 }
@@ -185,6 +185,12 @@ a:focus-visible {
 }
 
 /* --- Panddins & margins --- */
+
+.pt-10 {
+	padding-top: 10rem!important;
+}
+
+
 
 .py-6 {
 	padding-top: 4rem!important;
@@ -664,7 +670,7 @@ a:focus-visible {
 		display: none;
 	}
 
-	.project-split-row + .project-split-row::before {
+	.project-split-row::before {
 		content: "";
 		position: absolute;
 		top: 0;

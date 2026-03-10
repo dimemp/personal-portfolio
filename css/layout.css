@@ -1,0 +1,184 @@
+/* layout.css — Split row, vertical divider, portrait */
+
+/* --- Split row (vertical divider + portrait) --- */
+
+.split-card {
+	min-height: auto;
+}
+
+.split-card.is-dimmed {
+	display: none;
+}
+
+.split-card-body {
+	transition: opacity 1s ease;
+}
+
+@media (min-width: 992px) {
+
+	.split-card {
+		min-height: 40rem;
+	}
+
+	.split-card.is-dimmed {
+		display: flex;
+		cursor: pointer;
+	}
+
+	.split-card.is-dimmed .split-card-body {
+		opacity: 0.5;
+	}
+
+}
+
+.split-card-rule {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 0.75px;
+	background: var(--dd-overlay);
+}
+
+.split-card-dot {
+	position: absolute;
+	top: 0;
+	z-index: 2;
+}
+
+.split-card-dot--start {
+	transform: translate(-50%, -50%);
+}
+
+.split-card-dot--end {
+	transform: translate(50%, -50%);
+}
+
+/* --- Vertical divider (lg+ only) --- */
+
+@media (min-width: 992px) {
+
+	.split-divider {
+		position: absolute;
+		top: -7px;
+		bottom: -7px;
+		left: 50%;
+		transform: translateX(-50%);
+		pointer-events: none;
+		z-index: 1;
+	}
+
+}
+
+.split-line {
+	width: 1px;
+	flex: 1;
+	background: var(--dd-overlay);
+}
+
+.split-dot {
+	width: 14px;
+	height: 14px;
+	background: var(--dd-surface);
+}
+
+/* --- Portrait --- */
+
+.portrait-wrap {
+	position: relative;
+	width: 280px;
+	margin: 0 auto;
+	z-index: 5;
+	pointer-events: none;
+	order: -1;
+}
+
+.portrait-half {
+	width: 50%;
+	transition: opacity 1s ease;
+}
+
+.portrait-half.is-dimmed {
+	background: var(--dd-surface);
+	opacity: 0.5;
+}
+
+@media (min-width: 992px) {
+
+	.portrait-wrap {
+		position: absolute;
+		top: 35%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 450px;
+		margin: 0;
+		order: unset;
+	}
+
+}
+
+/* --- Project split-row mobile separators --- */
+
+@media (min-width: 992px) {
+
+	.project-split-row .split-card-rule {
+		display: none!important;
+	}
+
+	.project-split-row::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 0.75px;
+		background: var(--dd-overlay);
+		z-index: 1;
+	}
+
+}
+
+@media (max-width: 991.98px) {
+
+	.mobile-row-rule {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 0.75px;
+		background: var(--dd-overlay);
+		pointer-events: none;
+		z-index: 3;
+	}
+
+	.mobile-row-rule .mobile-dot {
+		position: absolute;
+		top: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		background: var(--dd-surface);
+	}
+
+	.mobile-row-rule .mobile-dot::after {
+		content: "";
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: var(--dd-ink);
+	}
+
+	.mobile-row-rule .mobile-dot--left {
+		left: 0;
+		transform: translate(-50%, -50%);
+	}
+
+	.mobile-row-rule .mobile-dot--right {
+		right: 0;
+		transform: translate(50%, -50%);
+	}
+
+}

@@ -1,0 +1,196 @@
+/* base.css — Tokens, dot pattern, typography, buttons, navbar */
+
+/* --- Imports fonts & icons --- */
+@import url("../fonts/fontfamily/dm-sans.css");
+@import url("../fonts/bootstrapicons/bootstrap-icons.min.css");
+
+/* --- Root & tokens --- */
+
+:root {
+	--bs-body-font-family: "dm-sans", Roboto, Arial, sans-serif;
+	--bs-body-font-size: 1rem;
+	--bs-body-font-weight: 400;
+	--bs-body-line-height: 1.6;
+	--bs-body-color: #717171;
+	--bs-body-bg: #FBFBFB;
+	--dd-bg-dark: #f5f3f1;
+	--bs-border-radius: 0.5rem;
+	--bs-border-radius-sm: 0.25rem;
+	--bs-border-radius-lg: 0.75rem;
+	--dd-ink: #0A0A0A;
+	--dd-surface: #FBFBFB;
+	--dd-muted: #F0F0EF;
+	--dd-subtle: #E2E1E0;
+	--dd-border: #D5D4D3;
+	--dd-dim: #B8B7B6;
+	--dd-faded: #737271;
+	--dd-body: #717171;
+	--dd-strong: #3A3A39;
+	--dd-heading: #262625;
+	--dd-overlay: rgba(10, 10, 10, 0.05);
+	--dd-rule: rgba(10, 10, 10, 0.05);
+	--dd-pill: 50rem;
+	--dd-gap-y: 3rem;
+	--dd-gap-y-lg: 5rem;
+}
+
+/* --- Shared dot pattern --- */
+
+.dot-ring {
+	width: 14px;
+	height: 14px;
+	background: var(--dd-surface);
+}
+
+.dot-fill {
+	width: 0.125rem;
+	height: 0.125rem;
+	border-radius: 50%;
+	background: var(--dd-ink);
+}
+
+/* --- Typography --- */
+
+h1, .h1 {
+	font-size: 2.5rem;
+	font-weight: 500;
+	color: var(--dd-ink);
+	letter-spacing: -0.025em;
+	line-height: 1.15;
+}
+
+h2, .h2 {
+	font-weight: 500;
+	color: var(--dd-ink);
+	letter-spacing: -0.02em;
+	line-height: 1.2;
+}
+
+h3, .h3 {
+	font-weight: 500;
+	color: var(--dd-heading);
+	line-height: 1.3;
+}
+
+h4, .h4 {
+	font-size: 1.125rem;
+	font-weight: 500;
+	color: var(--dd-heading);
+	line-height: 1.35;
+}
+
+h6, .h6 {
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--dd-heading);
+	line-height: 1.3;
+}
+
+p, .body-text {
+	color: var(--dd-body);
+}
+
+.fs-09 {
+	font-size: 0.9rem;
+}
+
+.fs-0875 {
+	font-size: 0.875rem;
+}
+
+a {
+	color: var(--dd-body);
+	text-decoration: underline;
+	transition: text-decoration 0.2s, color 0.2s;
+}
+
+a:hover,
+a:focus,
+a:focus-visible {
+	text-decoration: none;
+}
+
+/* --- Buttons --- */
+
+.btn-primary {
+	--bs-btn-color: #fff;
+	--bs-btn-bg: var(--dd-ink);
+	--bs-btn-border-color: var(--dd-ink);
+	--bs-btn-hover-color: #fff;
+	--bs-btn-hover-bg: var(--dd-heading);
+	--bs-btn-hover-border-color: var(--dd-heading);
+	--bs-btn-active-color: #fff;
+	--bs-btn-active-bg: var(--dd-strong);
+	--bs-btn-active-border-color: var(--dd-strong);
+	--bs-btn-font-weight: 500;
+	--bs-btn-font-size: 0.875rem;
+	--bs-btn-padding-y: 0.5rem;
+	--bs-btn-padding-x: 1.125rem;
+	--bs-btn-border-radius: var(--dd-pill);
+	--bs-btn-disabled-bg: var(--dd-dim);
+	--bs-btn-disabled-border-color: var(--dd-dim);
+}
+
+.btn-outline-primary {
+	--bs-btn-color: var(--dd-heading);
+	--bs-btn-border-color: var(--dd-border);
+	--bs-btn-hover-color: var(--dd-ink);
+	--bs-btn-hover-bg: var(--dd-muted);
+	--bs-btn-hover-border-color: var(--dd-dim);
+	--bs-btn-active-color: var(--dd-ink);
+	--bs-btn-active-bg: var(--dd-subtle);
+	--bs-btn-active-border-color: var(--dd-dim);
+	--bs-btn-font-weight: 500;
+	--bs-btn-font-size: 0.875rem;
+	--bs-btn-padding-y: 0.5rem;
+	--bs-btn-padding-x: 1.125rem;
+	--bs-btn-border-radius: var(--dd-pill);
+	--bs-btn-disabled-color: var(--dd-dim);
+	--bs-btn-disabled-border-color: var(--dd-border);
+}
+
+/* --- Navbar --- */
+
+.navbar-brand {
+	font-size: 0 !important;
+}
+
+.navbar {
+	--bs-navbar-padding-y: 0.75rem;
+}
+
+.navbar .nav-link {
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: var(--dd-heading);
+	padding: 0.25rem 0.625rem!important;
+	border-radius: var(--dd-pill);
+	transition: color 0.15s, background-color 0.15s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible {
+	color: var(--dd-ink);
+	background-color: var(--dd-muted);
+}
+
+.navbar .nav-link.active {
+	color: var(--dd-ink);
+	font-weight: 600;
+}
+
+/* --- Paddings & margins --- */
+
+.pt-10 {
+	padding-top: 10rem!important;
+}
+
+.py-6 {
+	padding-top: 4rem!important;
+	padding-bottom: 4rem!important;
+}
+
+.py-7 {
+	padding-top: 4.5rem!important;
+	padding-bottom: 4.5rem!important;
+}

@@ -1,61 +1,50 @@
 $(function () {
 
 	// --- Footer ---
+
 	// Update the year in the footer
 	$('#year').text(new Date().getFullYear());
 
-	// --- Project modal (communities & builder pages) ---
-	// Content is provided by communities-modal-content.js or web-projects-modal-content.js
+	// --- Project modal ---
+
+	// Variables
 	var currentProjectIndex = 0,
-		$overlay = $('#projectModalOverlay'),
-		$modal = $('#projectModal'),
+		modalEl = document.getElementById('projectModal'),
+		$modal = $(modalEl),
+		$modalContent = $('#js-project-modal-content'),
 		$prevBtn = $('#projectModalPrev'),
 		$nextBtn = $('#projectModalNext'),
-		$modalContent = $('#js-project-modal-content'),
-		// Whichever content script is loaded for this page (communities or web-projects)
 		projectModalContent = window.communitiesModalContent || window.webProjectsModalContent,
-		hasProjectModalContent = projectModalContent && projectModalContent.length && $modalContent.length;
+		hasProjectModalContent = projectModalContent && projectModalContent.length && $modalContent.length,
+		bsModal = modalEl ? new bootstrap.Modal(modalEl) : null;
 
-	// Inject HTML for the given project index and scroll modal content to top
 	function renderProject(index) {
 		currentProjectIndex = index;
 		if (hasProjectModalContent) {
 			var content = projectModalContent[index];
-			if (content) 
+			if (content)
 				$modalContent.html(content);
 		}
-		// Reset scroll so user sees the top of the new content
 		$('.project-modal-content').scrollTop(0);
 	}
 
-	// Show modal and render content for the given project index; lock body scroll
 	function openModal(index) {
 		renderProject(index);
-		$overlay.addClass('is-open');
-		$('body').addClass('modal-open');
+		if (bsModal) bsModal.show();
 	}
 
-	// Hide modal and restore body scroll
-	function closeModal() {
-		$overlay.removeClass('is-open');
-		$('body').removeClass('modal-open');
-	}
-
-	// "Learn more" in each row: open modal for that row's project index
 	$('.btn-learn-more').on('click', function (e) {
 		e.preventDefault();
 		var idx = parseInt($(this).data('project'), 10);
 		if (hasProjectModalContent && !isNaN(idx)) openModal(idx);
 	});
 
-	// Click anywhere on the row (except links/buttons) to open the modal
 	$('.project-split-row').on('click', function (e) {
 		if ($(e.target).closest('a, button').length) return;
 		var idx = parseInt($(this).data('project'), 10);
 		if (hasProjectModalContent && !isNaN(idx)) openModal(idx);
 	});
 
-	// Hover on row: play video after ~1s delay; leave: cancel or pause and reset
 	$('.project-split-row').on('mouseenter', function () {
 		var $row = $(this);
 		$row.data('videoPlayTimeout', setTimeout(function () {
@@ -71,16 +60,6 @@ $(function () {
 		});
 	});
 
-	// Close button in the top-right of the modal
-	$('#projectModalClose').on('click', closeModal);
-
-	// Click on overlay background (not the modal panel) closes the modal
-	$overlay.on('click', function (e) {
-		if ($(e.target).is($overlay)) 
-			closeModal();
-	});
-
-	// Go to previous project in the list (wraps to last if at first)
 	function prevProject() {
 		if (!hasProjectModalContent) return;
 		var len = projectModalContent.length,
@@ -88,44 +67,38 @@ $(function () {
 		renderProject(idx);
 	}
 
-	// Go to next project in the list (wraps to first if at last)
 	function nextProject() {
-		if (!hasProjectModalContent) 
-			return;
+		if (!hasProjectModalContent) return;
 		var len = projectModalContent.length,
 			idx = (currentProjectIndex + 1) % len;
 		renderProject(idx);
 	}
 
-	// Keyboard: Escape to close, Arrow keys for prev/next (only when modal is open)
+	// Arrow keys for prev/next (Escape handled by Bootstrap)
 	$(document).on('keydown', function (e) {
-		if (!$overlay.hasClass('is-open')) return;
-		if (e.key === 'Escape') closeModal();
+		if (!$modal.hasClass('show')) return;
 		if (e.key === 'ArrowLeft') prevProject();
 		if (e.key === 'ArrowRight') nextProject();
 	});
 
-	// Prev/next buttons in the modal nav bar
 	$prevBtn.on('click', prevProject);
 	$nextBtn.on('click', nextProject);
 
 	// --- Mobile swipe/drag-to-close ---
-	// Uses pointer events for touch and Firefox responsive mode; drag handle down to close modal
 	(function () {
 		var startY = 0,
 			currentY = 0,
 			dragging = false,
+			$panel = $modal.find('.project-modal-panel'),
 			$handle = $modal.find('.project-modal-handle');
 
-		// Prevent browser from handling touch (e.g. pull-to-refresh) while dragging
 		$handle.css('touch-action', 'none');
 
-		// Start drag: record position, disable transition for smooth follow
 		$handle.on('pointerdown', function (e) {
 			startY = e.originalEvent.clientY;
 			currentY = startY;
 			dragging = true;
-			$modal.css('transition', 'none');
+			$panel.css('transition', 'none');
 			this.setPointerCapture(e.originalEvent.pointerId);
 		});
 
@@ -134,20 +107,19 @@ $(function () {
 			currentY = e.originalEvent.clientY;
 			var diff = currentY - startY;
 			if (diff > 0)
-				$modal.css('transform', 'translateY(' + diff + 'px)');
+				$panel.css('transform', 'translateY(' + diff + 'px)');
 		});
 
-		// End drag: close modal if dragged down enough, else snap back
 		$handle.on('pointerup pointercancel', function () {
 			if (!dragging) return;
 			dragging = false;
-			$modal.css('transition', '');
+			$panel.css('transition', '');
 			var diff = currentY - startY;
 			if (diff > 100) {
-				closeModal();
-				setTimeout(function () { $modal.css('transform', ''); }, 350);
+				if (bsModal) bsModal.hide();
+				setTimeout(function () { $panel.css('transform', ''); }, 350);
 			} else
-				$modal.css('transform', '');
+				$panel.css('transform', '');
 		});
 	})();
 
@@ -164,8 +136,7 @@ $(function () {
 		});
 	})();
 
-	// --- Home page: Product vs Community toggle (index.html) ---
-	// Check if we're on a large screen (Bootstrap lg breakpoint)
+	// --- Home page: Product vs Community toggle ---
 	function isLargeScreen() {
 		return window.matchMedia('(min-width: 992px)').matches;
 	}

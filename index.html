@@ -15,7 +15,10 @@
 		<link rel="icon" href="imgs/favicon.png" sizes="32x32">
 		<link rel="icon" href="imgs/favicon_16.png" sizes="16x16">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/components.css">
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/modal.css">
 	</head>
 	<body>
 		<header>
@@ -62,13 +65,13 @@
 
 			</section>
 
-			<section class="band band-rule pb-0">
+			<section class="band band-rule position-relative overflow-visible pb-0">
 
 				<span class="rule-left"></span>
 				<span class="rule-center"></span>
 				<span class="rule-right"></span>
-				<span class="band-dot band-dot--start"><span class="dot-ring"><span class="dot-fill"></span></span></span>
-				<span class="band-dot band-dot--end"><span class="dot-ring"><span class="dot-fill"></span></span></span>
+				<span class="band-dot band-dot--start position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
+				<span class="band-dot band-dot--end position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 
 				<div class="col-12 col-lg-5 px-2 px-lg-4">
 					<h3>Want to see what I’ve built, or who I’ve brought together?</h3>
@@ -82,36 +85,36 @@
 					</ul>
 				</div>
 
-				<div class="row split-row mt-5 mx-0">
-					<div class="col-12 col-lg-6 z-3 pe-lg-5 split-card" id="product-builder-content">
-						<span class="split-card-rule"></span>
-						<span class="split-card-dot split-card-dot--start"><span class="dot-ring"><span class="dot-fill"></span></span></span>
-						<span class="split-card-dot split-card-dot--end"><span class="dot-ring"><span class="dot-fill"></span></span></span>
-						<div class="col-12 col-lg-10 split-card-body px-2 px-lg-4 pb-5">
+			<div class="row split-row position-relative mt-5 mx-0">
+				<div class="col-12 col-lg-6 z-3 pe-lg-5 split-card d-flex flex-column position-relative pt-4" id="product-builder-content">
+					<span class="split-card-rule d-none d-lg-block"></span>
+					<span class="split-card-dot split-card-dot--start start-0 d-none d-lg-block"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
+					<span class="split-card-dot split-card-dot--end end-0 d-none d-lg-block"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
+					<div class="col-12 col-lg-10 split-card-body mt-auto px-2 px-lg-4 pb-5">
 							<h4 class="mb-2">Product builder</h4>
 							<p>Web products, SaaS platforms, and digital experiences I've designed and shipped.</p>
 							<a class="btn btn-primary" href="builder.html"><i class="bi bi-arrow-up-right me-2"></i>Projects</a>
 						</div>
 					</div>
-					<div class="col-12 col-lg-6 z-3 ps-lg-5 split-card is-dimmed" id="community-builder-content">
-						<span class="split-card-rule"></span>
-						<span class="split-card-dot split-card-dot--start"><span class="dot-ring"><span class="dot-fill"></span></span></span>
-						<span class="split-card-dot split-card-dot--end"><span class="dot-ring"><span class="dot-fill"></span></span></span>
-						<div class="col-12 col-lg-10 split-card-body px-2 px-lg-4 pb-5">
+			<div class="col-12 col-lg-6 z-3 ps-lg-5 split-card d-flex flex-column position-relative pt-4 is-dimmed" id="community-builder-content">
+					<span class="split-card-rule d-none d-lg-block"></span>
+					<span class="split-card-dot split-card-dot--start start-0 d-none d-lg-block"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
+					<span class="split-card-dot split-card-dot--end end-0 d-none d-lg-block"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
+					<div class="col-12 col-lg-10 split-card-body mt-auto px-2 px-lg-4 pb-5">
 							<h4 class="mb-2">Community builder</h4>
 							<p>Founder communities and events I've built and brought together.</p>
 							<a class="btn btn-primary community-btn" href="communities.html"><i class="bi bi-arrow-up-right me-2"></i>Communities</a>
 						</div>
 					</div>
-					<div class="split-divider">
-						<span class="split-dot"><span class="dot-ring"><span class="dot-fill"></span></span></span>
+					<div class="split-divider d-none d-lg-flex flex-lg-column align-items-lg-center">
+						<span class="split-dot d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 						<span class="split-line"></span>
-						<span class="split-dot"><span class="dot-ring"><span class="dot-fill"></span></span></span>
+						<span class="split-dot d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 					</div>
 					<div class="portrait-wrap">
-						<div class="portrait-half portrait-half--left"></div>
-						<div class="portrait-half portrait-half--right is-dimmed"></div>
-						<img src="imgs/dimosiaris_grayscale_main.png" alt="Dimitris Dimosiaris grayscale main portrait" class="portrait-img">
+					<div class="portrait-half portrait-half--left d-block position-absolute top-0 bottom-0 start-0 z-1"></div>
+					<div class="portrait-half portrait-half--right d-block position-absolute top-0 bottom-0 end-0 z-1 is-dimmed"></div>
+						<img src="imgs/dimosiaris_grayscale_main.png" alt="Dimitris Dimosiaris grayscale main portrait" class="portrait-img d-block w-100">
 					</div>
 				</div>
 
@@ -120,12 +123,12 @@
 		</main>
 
 		<footer class="container">
-			<div class="band-rule py-5 px-2 px-lg-4">
+			<div class="band-rule position-relative py-5 px-2 px-lg-4">
 				<span class="rule-left"></span>
 				<span class="rule-center"></span>
 				<span class="rule-right"></span>
-				<span class="band-dot band-dot--start"><span class="dot-ring"><span class="dot-fill"></span></span></span>
-				<span class="band-dot band-dot--end"><span class="dot-ring"><span class="dot-fill"></span></span></span>
+				<span class="band-dot band-dot--start position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
+				<span class="band-dot band-dot--end position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<div class="d-flex justify-content-between">
 					<p class="mb-0">&copy; <span id="year"></span> Dimitris Dimosiaris personal page</p>
 					<div class="d-flex gap-3">

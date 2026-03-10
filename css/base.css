@@ -1,10 +1,11 @@
-/* base.css — Tokens, dot pattern, typography, buttons, navbar */
+/* --- Base: tokens, dot pattern, typography, buttons, navbar --- */
 
-/* --- Imports fonts & icons --- */
+/* Imports fonts & icons */
+
 @import url("../fonts/fontfamily/dm-sans.css");
 @import url("../fonts/bootstrapicons/bootstrap-icons.min.css");
 
-/* --- Root & tokens --- */
+/* Root & tokens */
 
 :root {
 	--bs-body-font-family: "dm-sans", Roboto, Arial, sans-serif;
@@ -34,7 +35,7 @@
 	--dd-gap-y-lg: 5rem;
 }
 
-/* --- Shared dot pattern --- */
+/* Shared dot pattern */
 
 .dot-ring {
 	width: 14px;
@@ -49,7 +50,7 @@
 	background: var(--dd-ink);
 }
 
-/* --- Typography --- */
+/* Typography */
 
 h1, .h1 {
 	font-size: 2.5rem;
@@ -110,7 +111,7 @@ a:focus-visible {
 	text-decoration: none;
 }
 
-/* --- Buttons --- */
+/* Buttons */
 
 .btn-primary {
 	--bs-btn-color: #fff;
@@ -149,7 +150,7 @@ a:focus-visible {
 	--bs-btn-disabled-border-color: var(--dd-border);
 }
 
-/* --- Navbar --- */
+/* Navbar */
 
 .navbar-brand {
 	font-size: 0 !important;
@@ -179,7 +180,7 @@ a:focus-visible {
 	font-weight: 600;
 }
 
-/* --- Paddings & margins --- */
+/* Paddings & margins */
 
 .pt-10 {
 	padding-top: 10rem!important;

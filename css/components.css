@@ -1,6 +1,6 @@
-/* components.css — Grayscale rows, category boxes, logo grid, bands, toggle tabs */
+/* --- Components: grayscale rows, category boxes, logo grid, bands, toggle tabs --- */
 
-/* --- Grayscale rows (logos + media) --- */
+/* Grayscale rows (logos + media) */
 
 .project-split-row img,
 .project-split-row video {
@@ -17,7 +17,7 @@
 	cursor: pointer;
 }
 
-/* --- Category boxes --- */
+/* Category boxes */
 
 .tech-logos-column .tech-logos-box + .tech-logos-box {
 	margin-top: 0.5rem;
@@ -67,7 +67,7 @@
 
 }
 
-/* --- Logo grid --- */
+/* Logo grid */
 
 .tech-logos-grid {
 	display: grid;
@@ -101,7 +101,7 @@
 	filter: grayscale(0%) opacity(1);
 }
 
-/* --- Content bands (vertical rails + top rule) --- */
+/* Content bands (vertical rails + top rule) */
 
 .band {
 	border-left: 1px solid var(--dd-overlay);
@@ -117,7 +117,7 @@
 
 }
 
-/* --- Band rule (horizontal lines + dots at top) --- */
+/* Band rule (horizontal lines + dots at top) */
 
 .band-rule .rule-center {
 	position: absolute;
@@ -146,7 +146,7 @@
 	background: var(--dd-rule);
 }
 
-/* --- Band dots --- */
+/* Band dots */
 
 .band-dot--start {
 	transform: translate(-50%, -50%);
@@ -156,7 +156,7 @@
 	transform: translate(50%, -50%);
 }
 
-/* --- Toggle tabs --- */
+/* Toggle tabs */
 
 .toggle-tabs {
 	display: inline-flex;

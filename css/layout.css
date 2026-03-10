@@ -1,6 +1,6 @@
-/* layout.css — Split row, vertical divider, portrait */
+/* --- Split row, vertical divider, portrait, footer --- */
 
-/* --- Split row (vertical divider + portrait) --- */
+/* Split row (vertical divider + portrait) */
 
 .split-card {
 	min-height: auto;
@@ -54,7 +54,7 @@
 	transform: translate(50%, -50%);
 }
 
-/* --- Vertical divider (lg+ only) --- */
+/* Vertical divider (lg+ only) */
 
 @media (min-width: 992px) {
 
@@ -117,7 +117,7 @@
 
 }
 
-/* --- Project split-row mobile separators --- */
+/* Project split-row mobile separators */
 
 @media (min-width: 992px) {
 

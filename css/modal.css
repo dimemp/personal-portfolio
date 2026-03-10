@@ -93,20 +93,3 @@
 	background: var(--dd-muted);
 	border-color: var(--dd-dim);
 }
-
-/* --- Footer --- */
-
-footer .band {
-	padding: 1.5rem 0 1rem;
-}
-
-footer .band-rule .rule-center,
-footer .band-rule .rule-left,
-footer .band-rule .rule-right {
-	background: var(--dd-overlay);
-}
-
-footer p {
-	font-size: 0.875rem;
-	color: var(--dd-faded);
-}

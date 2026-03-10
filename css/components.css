@@ -2,14 +2,12 @@
 
 /* Grayscale rows (logos + media) */
 
-.project-split-row img,
-.project-split-row video {
-	filter: grayscale(100%);
+.project-split-row .project-logo {
+	filter: grayscale(100%) opacity(0.35);
 	transition: filter 0.4s ease;
 }
 
-.project-split-row:hover img,
-.project-split-row:hover video {
+.project-split-row:hover .project-logo {
 	filter: grayscale(0%);
 }
 
@@ -48,23 +46,6 @@
 
 .tech-logos-box-dot--end {
 	transform: translate(50%, -50%);
-}
-
-@media (min-width: 992px) {
-
-	.tech-logos-column .tech-logos-box-rule {
-		left: calc(-1 * var(--bs-gutter-x, 1.5rem) / 2);
-		right: calc(-1 * var(--bs-gutter-x, 1.5rem) / 2);
-	}
-
-	.tech-logos-column .tech-logos-box-dot--start {
-		left: calc(-1 * var(--bs-gutter-x, 1.5rem) / 2);
-	}
-
-	.tech-logos-column .tech-logos-box-dot--end {
-		right: calc(-1 * var(--bs-gutter-x, 1.5rem) / 2);
-	}
-
 }
 
 /* Logo grid */

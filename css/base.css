@@ -124,7 +124,7 @@ a:focus-visible {
 	--bs-btn-active-bg: var(--dd-strong);
 	--bs-btn-active-border-color: var(--dd-strong);
 	--bs-btn-font-weight: 500;
-	--bs-btn-font-size: 0.875rem;
+	--bs-btn-font-size: 0.9rem;
 	--bs-btn-padding-y: 0.5rem;
 	--bs-btn-padding-x: 1.125rem;
 	--bs-btn-border-radius: var(--dd-pill);
@@ -137,17 +137,21 @@ a:focus-visible {
 	--bs-btn-border-color: var(--dd-border);
 	--bs-btn-hover-color: var(--dd-ink);
 	--bs-btn-hover-bg: var(--dd-muted);
-	--bs-btn-hover-border-color: var(--dd-dim);
+	--bs-btn-hover-border-color: var(--dd-border);
 	--bs-btn-active-color: var(--dd-ink);
 	--bs-btn-active-bg: var(--dd-subtle);
 	--bs-btn-active-border-color: var(--dd-dim);
 	--bs-btn-font-weight: 500;
-	--bs-btn-font-size: 0.875rem;
+	--bs-btn-font-size: 0.9rem;
 	--bs-btn-padding-y: 0.5rem;
 	--bs-btn-padding-x: 1.125rem;
 	--bs-btn-border-radius: var(--dd-pill);
 	--bs-btn-disabled-color: var(--dd-dim);
 	--bs-btn-disabled-border-color: var(--dd-border);
+}
+
+.btn i {
+	font-size: 0.85rem;
 }
 
 /* Navbar */

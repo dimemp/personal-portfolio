@@ -35,9 +35,11 @@
 }
 
 @media (max-width: 991.98px) {
+
 	.project-modal-dialog {
 		max-width: 100%;
 	}
+	
 }
 
 /* Mobile drag handle */

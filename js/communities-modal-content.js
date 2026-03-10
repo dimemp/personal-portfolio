@@ -6,7 +6,7 @@ const variousCommunitiesContent = `
 	<div class="border-bottom pb-5 mb-5">
 		<h6 class="fs-09 text-muted">Mar 2019 - Present</h6>
 		<h3 class="mb-4">Fellow at Sigma Squared</h3>
-		<img class="img-fluid rounded-2 mb-4" src="imgs/communities/mindspace_group_image.webp" alt="Mindspace team">
+		<img class="img-fluid rounded-2 mb-4" src="imgs/communities/sigma_squared_group.jpg" alt="Sigma Squared team">
 		<div class="d-flex flex-row flex-wrap gap-4 bg-white border rounded-2 p-4 mb-4">
 			<div>
 				<h6 class="fs-09">Roles</h6>
@@ -63,7 +63,7 @@ const variousCommunitiesContent = `
 	<div class="border-bottom pb-5 mb-5">
 		<h6 class="fs-09 text-muted">Feb 2023 - Feb 2026</h6>
 		<h3 class="mb-4">Co-initiator Startup Universe</h3>
-		<img class="img-fluid rounded-2 mb-4" src="imgs/communities/french_tech_athens_group_image.webp" alt="La French Tech Athens team">
+		<img class="img-fluid rounded-2 mb-4" src="imgs/communities/startup_universe_group.jpg" alt="Startup Universe team">
 		<div class="d-flex flex-row flex-wrap gap-4 bg-white border rounded-2 p-4 mb-4">
 			<div>
 				<h6 class="fs-09">Website</h6>
@@ -88,7 +88,7 @@ const variousCommunitiesContent = `
 	<div>
 		<h6 class="fs-09 text-muted">Feb 2023 - Feb 2026</h6>
 		<h3 class="mb-4">GreekTech ambassador in Greece</h3>
-		<img class="img-fluid rounded-2 mb-4" src="imgs/communities/french_tech_athens_group_image.webp" alt="La French Tech Athens team">
+		<img class="img-fluid rounded-2 mb-4" src="imgs/communities/greektech_group.jpg" alt="GreekTech team">
 		<div class="d-flex flex-row flex-wrap gap-4 bg-white border rounded-2 p-4 mb-4">
 			<div>
 				<h6 class="fs-09">Website</h6>

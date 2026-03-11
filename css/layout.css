@@ -36,8 +36,10 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 0.75px;
+	height: 1px;
 	background: var(--dd-overlay);
+	transform: scaleY(0.65);
+	transform-origin: top;
 }
 
 .split-card-dot {
@@ -131,8 +133,10 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		height: 0.75px;
+		height: 1px;
 		background: var(--dd-overlay);
+		transform: scaleY(0.65);
+		transform-origin: top;
 		z-index: 1;
 	}
 
@@ -140,13 +144,20 @@
 
 @media (max-width: 991.98px) {
 
+	/* Project image wrap — needs explicit height because the child is position-absolute */
+	.project-img-wrap {
+		min-height: 220px;
+	}
+
 	.mobile-row-rule {
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
-		height: 0.75px;
+		height: 1px;
 		background: var(--dd-overlay);
+		transform: scaleY(0.65);
+		transform-origin: top;
 		pointer-events: none;
 		z-index: 3;
 	}
@@ -165,8 +176,8 @@
 
 	.mobile-row-rule .mobile-dot::after {
 		content: "";
-		width: 4px;
-		height: 4px;
+		width: 0.125rem;
+		height: 0.125rem;
 		border-radius: 50%;
 		background: var(--dd-ink);
 	}

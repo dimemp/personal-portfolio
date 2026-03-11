@@ -33,6 +33,12 @@ $(function () {
 		if (bsModal) bsModal.show();
 	}
 
+	if (modalEl) {
+		modalEl.addEventListener('shown.bs.modal', function () {
+			$('.project-modal-content').scrollTop(0);
+		});
+	}
+
 	$('.btn-learn-more').on('click', function (e) {
 		e.preventDefault();
 		var idx = parseInt($(this).data('project'), 10);

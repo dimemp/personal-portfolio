@@ -36,8 +36,10 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 0.75px;
+	height: 1px;
 	background: var(--dd-overlay);
+	transform: scaleY(0.65);
+	transform-origin: top;
 }
 
 .tech-logos-box-dot--start {
@@ -55,8 +57,21 @@
 	grid-template-columns: repeat(3, 1fr);
 }
 
-.tech-logos-grid--4-cols {
-	grid-template-columns: repeat(4, 1fr);
+.tech-logos-grid--8-cols {
+	grid-template-columns: repeat(8, 1fr);
+}
+
+@media (max-width: 576px) {
+
+
+	.tech-logos-grid--8-cols {
+		grid-template-columns: repeat(3, 1fr)!important;
+	}
+
+	.tech-logos-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
 }
 
 .tech-logo-item {
@@ -76,6 +91,12 @@
 .tech-logo-item[data-name="GitHub"] img {
 	width: 35px;
 	height: 35px;
+}
+
+.tech-logo-item--wide img {
+	width: auto;
+	max-width: 120px;
+	height: 24px;
 }
 
 .tech-logo-item:hover img {
@@ -105,8 +126,10 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 0.75px;
+	height: 1px;
 	background: var(--dd-rule);
+	transform: scaleY(0.65);
+	transform-origin: top;
 }
 
 .band-rule .rule-left {
@@ -114,8 +137,10 @@
 	top: 0;
 	right: 100%;
 	width: calc(50vw - 50%);
-	height: 0.75px;
+	height: 1px;
 	background: var(--dd-rule);
+	transform: scaleY(0.65);
+	transform-origin: top;
 }
 
 .band-rule .rule-right {
@@ -123,8 +148,10 @@
 	top: 0;
 	left: 100%;
 	width: calc(50vw - 50%);
-	height: 0.75px;
+	height: 1px;
 	background: var(--dd-rule);
+	transform: scaleY(0.65);
+	transform-origin: top;
 }
 
 /* Band dots */

@@ -1,5 +1,15 @@
 /* --- Project modal --- */
 
+/* Prevent page content shift when Bootstrap toggles the body scrollbar */
+
+html:has(body.modal-open) {
+	scrollbar-gutter: stable;
+}
+
+body.modal-open {
+	padding-right: 0 !important;
+}
+
 .modal-backdrop {
 	background: rgba(10, 10, 10, 0.45);
 	backdrop-filter: blur(4px);

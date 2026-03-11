@@ -5,6 +5,12 @@
 @import url("../fonts/fontfamily/dm-sans.css");
 @import url("../fonts/bootstrapicons/bootstrap-icons.min.css");
 
+/* Prevent vw-based elements from causing horizontal scroll on Windows */
+
+html {
+	overflow-x: hidden;
+}
+
 /* Root & tokens */
 
 :root {

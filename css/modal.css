@@ -4,10 +4,12 @@
 
 html:has(body.modal-open) {
 	scrollbar-gutter: stable;
+	overflow: hidden;
 }
 
 body.modal-open {
 	padding-right: 0 !important;
+	overflow: hidden !important;
 }
 
 .modal-backdrop {

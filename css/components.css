@@ -93,6 +93,11 @@
 	height: 35px;
 }
 
+.tech-logo-item[data-name="Django"] img {
+	width: auto;
+	height: 28px;
+}
+
 .tech-logo-item--wide img {
 	width: auto;
 	max-width: 120px;

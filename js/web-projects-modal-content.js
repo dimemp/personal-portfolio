@@ -44,7 +44,7 @@ var brandsealContent = `
 			</div>
 		</div>
 	</div>
-	<div class="col-12 col-lg-10 col-xl-8 mx-auto my-5">
+	<div class="col-12 col-xl-10 mx-auto my-5">
 		<h6 class="mt-5">TL;DR</h6>
 		<ul class="mb-5">
 			<li>Engineering: 50,000+ lines of code built on Laravel/PHP</li>
@@ -115,7 +115,7 @@ var founderhoodContent = `
 			</div>
 		</div>
 	</div>
-	<div class="col-12 col-lg-10 col-xl-8 mx-auto my-5">
+	<div class="col-12 col-xl-10 mx-auto my-5">
 		<h6 class="mt-5">TL;DR</h6>
 		<ul class="mb-5">
 			<li>Scale: Powering 2,300+ startups and 5,000+ total users since 2018</li>
@@ -142,36 +142,67 @@ var founderhoodContent = `
 `;
 
 var variousWebProjectsContent = `
-	<h6 class="fs-09 text-muted">Nov 2012 - Jun 2015</h6>
-	<h3 class="mb-4">Founding member ThinkBiz</h3>
-	<img class="img-fluid rounded-2 mb-4" src="imgs/communities/Thinkbiz_group_image.jpg" alt="ThinkBiz team">
-	<div class="d-flex flex-row flex-wrap gap-4 bg-white border rounded-2 p-4 mb-4">
-		<div>
-			<h6 class="fs-09">Roles</h6>
-			<ul class="fs-09 ps-3 mb-0">
-				<li>"Knowledge Base" project team member (2012-2013)</li>
-				<li>"Day in a Startup" Project Team Lead (2013-2014)</li>
-				<li>HR member (2013-2015)</li>
-			</ul>
+	<div class="border-bottom pb-5 mb-5">
+		<h6 class="fs-09 text-muted">Oct 2020 - May 2022</h6>
+		<h3 class="mb-4">Initiator & tech lead | Startup Universe</h3>
+		<div class="w-100">
+			<video class="w-100 object-fit-cover rounded-2 mb-4" muted autoplay playsinline loop aria-label="Startup Universe landing page video">
+				<source src="imgs/builder/projects/gsu-video.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
 		</div>
-		<div>
-			<h6 class="fs-09">Website</h6>
-			<div class="d-block">
-				<a href="https://thinkbiz.gr" target="_blank"><i class="bi bi-arrow-up-right fs-0875 me-2"></i><span class="fs-09">thinkbiz.gr</span></a>
+		<div class="d-flex justify-content-evenly flex-wrap gap-4 bg-white border rounded-2 p-4">
+			<div>
+				<h6 class="fs-09">20,000+</h6>
+				<p class="fs-09 mb-0">visitors</p>
+			</div>
+			<div>
+				<h6 class="fs-09">600+</h6>
+				<p class="fs-09 mb-0">program applicants</p>
+			</div>
+			<div>
+				<h6 class="fs-09">Link</h6>
+				<div class="d-block">
+					<a href="https://dimemp.github.io/gsu/" target="_blank"><i class="bi bi-arrow-up-right fs-0875 me-2"></i><span class="fs-09">Startup Universe website</span></a><br>
+				</div>
 			</div>
 		</div>
-		<div>
-			<h6 class="fs-09">Tags</h6>
-			<div class="d-flex flex-wrap gap-2">
-				<span class="sidebar-tag">Community</span>
-				<span class="sidebar-tag">Entrepreneurship</span>
-				<span class="sidebar-tag">Education</span>
-			</div>
+		<div class="col-12 col-xl-10 mx-auto mt-5">
+			<h6 class="mb-4">Description</h6>
+			<p class="mb-0">I designed the brand identity and the digital gateway for this international program. The logo, three interlocking circles, symbolizes the connection between Greeks in Greece, Cyprus, and the global Diaspora. I built the landing page using HTML and CSS, integrating Airtable for form submissions. I also used Adobe After Effects to produce the hero section video.</p>
 		</div>
 	</div>
-	<p>ThinkBiz is the first Student Entrepreneurship Club of Greece. As a founding member I helped build the "Knowledge Base" and led "Day in a Startup" and HR for a team of 40+.</p>
+	<div class="pb-5 mb-5">
+		<h6 class="fs-09 text-muted">May 2015 - Dec 2016</h6>
+		<h3 class="mb-4">Co-founder (Product - Front - Design) | PartyBuzz </h3>
+		<div class="mb-4">
+			<div class="mb-5">
+				<img class="img-fluid rounded-2" src="imgs/builder/projects/partybuzz-user-profile.png" alt="PartyBuzz logo">
+				<figcaption class="figure-caption mt-2">User's profile page with limited invitations. Whole platform was invitation-only to curate the initial community.</figcaption>
+			</div>
+			<div>
+				<img class="img-fluid rounded-2" src="imgs/builder/projects/partybuzz-contibutions-invitation-modals.png" alt="PartyBuzz logo">
+				<figcaption class="figure-caption mt-2">Group "asking" invitation for a party & contributions requests.</figcaption>
+			</div>
+		</div>
+		<div class="bg-white border rounded-2 p-4">
+			<h6 class="fs-09">Tech & tools used</h6>
+			<div class="tech-logos-grid tech-logos-grid--8-cols">
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Django"><img src="imgs/builder/tech_logos/django-logo.svg" alt="Django"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="JavaScript"><img src="imgs/builder/tech_logos/javascript-logo.svg" alt="JavaScript"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="jQuery"><img src="imgs/builder/tech_logos/jquery-logo.svg" alt="jQuery"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="PostgreSQL"><img src="imgs/builder/tech_logos/postgresql-logo.svg" alt="PostgreSQL"></div>
+			</div>
+		</div>
+		<div class="col-12 col-xl-10 mx-auto mt-5">
+			<h6 class="mb-4">Description</h6>
+			<p>Partybuzz was my first deep dive into the Greek startup ecosystem. More than a simple RSVP tool, we built a platform for crowdsourced party at homes logistics, allowing organizers to request specific in-kind or financial contributions from guests to fund their parties. We also engineered a unique "Group RSVP" feature, a first for the time,where users could join parties as a collective, requiring the host to accept the entire group or none at all.</p>
+			<p class="mb-0">Built with Django, JS, jQuery, and PostgreSQL, I led a team of two developers and managed the branding (except the logo) and web design. This project anticipated the "collaborative social" trend currently dominated by apps like <a href="https://partiful.com/" target="_blank">Partiful</a> (which has raised $27.3M, including a Series A led by a16z).</p>
+		</div>
+	</div>
 `;
 
+// Content for each project row (data-project="0", "1", "2")
 window.webProjectsModalContent = [
 	brandsealContent,
 	founderhoodContent,

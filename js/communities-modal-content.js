@@ -33,13 +33,16 @@ const variousCommunitiesContent = `
 				</div>
 			</div>
 		</div>
-		<p class="mb-0">I served as the Greek Chapter Leader for Sigma Squared for six years, managing a local community of impact-driven founders under the age of 26. I currently serve as a Fellow within the global network of over 1,000 members, where the focus is on connecting ambitious entrepreneurs who are building companies in traditionally "broken" or inefficient industries.</p>
+		<div class="col-12 col-xl-10 mx-auto mt-5">
+			<h6 class="mb-4">Description</h6>
+			<p class="mb-0">I served as the Greek Chapter Leader for Sigma Squared for six years, managing a local community of impact-driven founders under the age of 26. I currently serve as a Fellow within the global network of over 1,000 members, where the focus is on connecting ambitious entrepreneurs who are building companies in traditionally "broken" or inefficient industries.</p>
+		</div>
 	</div>
 	<div class="border-bottom pb-5 mb-5">
 		<h6 class="fs-09 text-muted">Feb 2023 - Feb 2026</h6>
 		<h3 class="mb-4">Founding board member of La French Tech Athens</h3>
 		<img class="img-fluid rounded-2 mb-4" src="imgs/communities/french_tech_athens_group_image.webp" alt="La French Tech Athens team">
-		<div class="d-flex flex-row flex-wrap gap-4 bg-white border rounded-2 p-4 mb-4">
+		<div class="d-flex flex-row flex-wrap gap-4 bg-white border rounded-2 p-4">
 			<div>
 				<h6 class="fs-09">Website</h6>
 				<div class="d-block">
@@ -58,13 +61,16 @@ const variousCommunitiesContent = `
 				</div>
 			</div>
 		</div>
-		<p class="mb-0">As a founding board member of the Athens chapter, I work to bridge the French and Greek tech ecosystems. We provide a platform for entrepreneurs, investors, and public leaders to connect, leveraging a global network of 63 communities to help startups in both countries access new markets and resources.</p>
+		<div class="col-12 col-xl-10 mx-auto mt-5">
+			<h6 class="mb-4">Description</h6>
+			<p class="mb-0">As a founding board member of the Athens chapter, I work to bridge the French and Greek tech ecosystems. We provide a platform for entrepreneurs, investors, and public leaders to connect, leveraging a global network of 63 communities to help startups in both countries access new markets and resources.</p>
+		</div>
 	</div>
 	<div class="border-bottom pb-5 mb-5">
 		<h6 class="fs-09 text-muted">Feb 2023 - Feb 2026</h6>
 		<h3 class="mb-4">Co-initiator Startup Universe</h3>
 		<img class="img-fluid rounded-2 mb-4" src="imgs/communities/startup_universe_group.jpg" alt="Startup Universe team">
-		<div class="d-flex flex-row flex-wrap gap-4 bg-white border rounded-2 p-4 mb-4">
+		<div class="d-flex flex-row flex-wrap gap-4 bg-white border rounded-2 p-4">
 			<div>
 				<h6 class="fs-09">Website</h6>
 				<div class="d-block">
@@ -83,7 +89,10 @@ const variousCommunitiesContent = `
 				</div>
 			</div>
 		</div>
-		<p class="mb-0">I helped organize this digital program to support early-stage founders globally, reaching more than 2,500 participants across 40+ countries. The project was built to give founders in emerging or immature ecosystems a structured path to find the mentors and investors they need to scale their companies.</p>
+		<div class="col-12 col-xl-10 mx-auto mt-5">
+			<h6 class="mb-4">Description</h6>
+			<p class="mb-0">I helped organize this digital program to support early-stage founders globally, reaching more than 2,500 participants across 40+ countries. The project was built to give founders in emerging or immature ecosystems a structured path to find the mentors and investors they need to scale their companies.</p>
+		</div>
 	</div>
 	<div>
 		<h6 class="fs-09 text-muted">Feb 2023 - Feb 2026</h6>
@@ -108,7 +117,10 @@ const variousCommunitiesContent = `
 				</div>
 			</div>
 		</div>
-		<p class="mb-0">I served as an Ambassador in Greece for Greektech, a community originally founded in New York to support the Greek & Cypriot tech ecosystems. My role was focused on high-level strategy and ecosystem connectivity. I acted as a bridge between the organization and the local landscape, identifying and facilitating connections with potential donors, strategic partners, and high-growth startups. By leveraging my network, I helped the organization navigate the Greek market and ensure that their initiatives are aligned with the actual needs of founders on the ground.</p>
+		<div class="col-12 col-xl-10 mx-auto mt-5">
+			<h6 class="mb-4">Description</h6>
+			<p class="mb-0">I served as an Ambassador in Greece for Greektech, a community originally founded in New York to support the Greek & Cypriot tech ecosystems. My role was focused on high-level strategy and ecosystem connectivity. I acted as a bridge between the organization and the local landscape, identifying and facilitating connections with potential donors, strategic partners, and high-growth startups. By leveraging my network, I helped the organization navigate the Greek market and ensure that their initiatives are aligned with the actual needs of founders on the ground.</p>
+		</div>
 	</div>
 `;
 
@@ -141,9 +153,12 @@ const mindspaceContent = `
 			</div>
 		</div>
 	</div>
-	<p>I was one of the founding members of Mindspace, staying with the organization for nearly three years as it grew from a small student initiative at NTUA to a nationwide non-profit. In the early stages, I served as a Founding Board Member and PR Team Leader, where I defined the brand’s strategy and launched programs like "How to start a startup" at the National Technical University of Athens.</p>
-	<p>I also established the AI Club to provide a space for students to explore emerging technologies beyond their standard curriculum. My focus during these first two years was on creating a professional structure that could survive the high turnover of a student-run organization. In 2016, I stepped into the role of Chairman. During my tenure, I led the general strategy and oversaw a team of 40 active members across chapters in two cities.</p>
-	<p>I was responsible for fundraising over €50,000 to scale our core programs, including the "Mindspace Challenge" and the "Mindspace Trip" to the US. By the end of my term, we had built a network of over 80 pre-startup tech teams, providing them with the mentorship and international exposure needed to move their technology from the lab to the market. This period was defined by shifting the culture from "student projects" to "impact-driven startups," a transition that helped launch several companies that are still active in the Greek ecosystem today.</p>
+	<div class="col-12 col-xl-10 mx-auto mt-5">
+		<h6 class="mb-4">Description</h6>
+		<p>I was one of the founding members of Mindspace, staying with the organization for nearly three years as it grew from a small student initiative at NTUA to a nationwide non-profit. In the early stages, I served as a Founding Board Member and PR Team Leader, where I defined the brand’s strategy and launched programs like "How to start a startup" at the National Technical University of Athens.</p>
+		<p>I also established the AI Club to provide a space for students to explore emerging technologies beyond their standard curriculum. My focus during these first two years was on creating a professional structure that could survive the high turnover of a student-run organization. In 2016, I stepped into the role of Chairman. During my tenure, I led the general strategy and oversaw a team of 40 active members across chapters in two cities.</p>
+		<p class="mb-0">I was responsible for fundraising over €50,000 to scale our core programs, including the "Mindspace Challenge" and the "Mindspace Trip" to the US. By the end of my term, we had built a network of over 80 pre-startup tech teams, providing them with the mentorship and international exposure needed to move their technology from the lab to the market. This period was defined by shifting the culture from "student projects" to "impact-driven startups," a transition that helped launch several companies that are still active in the Greek ecosystem today.</p>
+	</div>
 `;
 
 const thinkbizContent = `
@@ -176,14 +191,15 @@ const thinkbizContent = `
 			</div>
 		</div>
 	</div>
-	<p>I joined ThinkBiz as a founding member in 2012, helping to establish the first student entrepreneurship club in Greece at the Athens University of Economics and Business (AUEB). During my first eight months, I focused on building the "Knowledge Base" project—a repository of resources for students—and organized our first major pitching event, which drew over 60 participants.</p>
-	<p>These early efforts were aimed at creating a structured environment where students could move beyond theory and begin testing business ideas. Over the next two years, I transitioned into an HR role, where I managed the internal culture and organizational structure for a team of over 40 members. Simultaneously, as the Project Team Lead for "Day in a Startup," I coordinated and executed five site visits to prominent Greek tech companies.</p>
-	<p>These visits allowed 40+ students to engage directly with founders and see the internal operations of a working startup. My work at ThinkBiz was defined by these practical initiatives, ensuring that the organization functioned efficiently and provided real-world value to its members through direct access to the local tech ecosystem.</p>
+	<div class="col-12 col-xl-10 mx-auto mt-5">
+		<h6 class="mb-4">Description</h6>
+		<p>I joined ThinkBiz as a founding member in 2012, helping to establish the first student entrepreneurship club in Greece at the Athens University of Economics and Business (AUEB). During my first eight months, I focused on building the "Knowledge Base" project—a repository of resources for students—and organized our first major pitching event, which drew over 60 participants.</p>
+		<p>These early efforts were aimed at creating a structured environment where students could move beyond theory and begin testing business ideas. Over the next two years, I transitioned into an HR role, where I managed the internal culture and organizational structure for a team of over 40 members. Simultaneously, as the Project Team Lead for "Day in a Startup," I coordinated and executed five site visits to prominent Greek tech companies.</p>
+		<p class="mb-0">These visits allowed 40+ students to engage directly with founders and see the internal operations of a working startup. My work at ThinkBiz was defined by these practical initiatives, ensuring that the organization functioned efficiently and provided real-world value to its members through direct access to the local tech ecosystem.</p>
+	</div>
 `;
 
-/**
- * Content for each project row (data-project="0", "1", "2"). Same ThinkBiz content for all until you add more.
- */
+// Content for each project row (data-project="0", "1", "2")
 window.communitiesModalContent = [
 	variousCommunitiesContent,
 	mindspaceContent,

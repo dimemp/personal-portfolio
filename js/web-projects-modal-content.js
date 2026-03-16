@@ -8,7 +8,7 @@ var brandsealContent = `
 	<h3 class="mb-4">Brandseal (by Wispit Ventures)</h3>
 	<div class="w-100">
 		<video class="w-100 object-fit-cover rounded-2 mb-4" muted autoplay playsinline loop aria-label="Brandseal video">
-			<source src="imgs/builder/projects/brandseal-video.mp4" type="video/mp4">
+			<source src="assets/builder/projects/brandseal-video.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
 	</div>
@@ -16,25 +16,25 @@ var brandsealContent = `
 		<div>
 			<h6 class="fs-09">Tech & tools used</h6>
 			<div class="tech-logos-grid tech-logos-grid--8-cols">
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="PHP"><img src="imgs/builder/tech_logos/php-logo.svg" alt="PHP"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Laravel"><img src="imgs/builder/tech_logos/laravel-logo.svg" alt="Laravel"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="MySQL"><img src="imgs/builder/tech_logos/mysql-logo.svg" alt="MySQL"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="MariaDB"><img src="imgs/builder/tech_logos/mariadb-logo.svg" alt="MariaDB"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Bootstrap"><img src="imgs/builder/tech_logos/bootstrap-logo.svg" alt="Bootstrap"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="HTML5"><img src="imgs/builder/tech_logos/html5-logo.svg" alt="HTML5"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="CSS3"><img src="imgs/builder/tech_logos/css3-logo.svg" alt="CSS3"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="JavaScript"><img src="imgs/builder/tech_logos/javascript-logo.svg" alt="JavaScript"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="jQuery"><img src="imgs/builder/tech_logos/jquery-logo.svg" alt="jQuery"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Git"><img src="imgs/builder/tech_logos/git-logo.svg" alt="Git"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="GitHub"><img src="imgs/builder/tech_logos/github-logo.svg" alt="GitHub"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="PHP"><img src="assets/builder/tech_logos/php-logo.svg" alt="PHP"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Laravel"><img src="assets/builder/tech_logos/laravel-logo.svg" alt="Laravel"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="MySQL"><img src="assets/builder/tech_logos/mysql-logo.svg" alt="MySQL"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="MariaDB"><img src="assets/builder/tech_logos/mariadb-logo.svg" alt="MariaDB"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Bootstrap"><img src="assets/builder/tech_logos/bootstrap-logo.svg" alt="Bootstrap"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="HTML5"><img src="assets/builder/tech_logos/html5-logo.svg" alt="HTML5"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="CSS3"><img src="assets/builder/tech_logos/css3-logo.svg" alt="CSS3"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="JavaScript"><img src="assets/builder/tech_logos/javascript-logo.svg" alt="JavaScript"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="jQuery"><img src="assets/builder/tech_logos/jquery-logo.svg" alt="jQuery"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Git"><img src="assets/builder/tech_logos/git-logo.svg" alt="Git"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="GitHub"><img src="assets/builder/tech_logos/github-logo.svg" alt="GitHub"></div>
 			</div>
 		</div>
 		<div>
 			<h6 class="fs-09">Integrations</h6>
 			<div class="col-12 col-lg-8 tech-logos-grid">
-				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Google Workspace"><img src="imgs/builder/tech_logos/google-workspace-full-logo.svg" alt="Google Workspace"></div>
-				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Notion"><img src="imgs/builder/tech_logos/notion-full-logo.svg" alt="Notion"></div>
-				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Slack"><img src="imgs/builder/tech_logos/slack-full-logo.svg" alt="Slack"></div>
+				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Google Workspace"><img src="assets/builder/tech_logos/google-workspace-full-logo.svg" alt="Google Workspace"></div>
+				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Notion"><img src="assets/builder/tech_logos/notion-full-logo.svg" alt="Notion"></div>
+				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Slack"><img src="assets/builder/tech_logos/slack-full-logo.svg" alt="Slack"></div>
 			</div>
 		</div>
 		<div>
@@ -59,11 +59,11 @@ var brandsealContent = `
 	</div>
 	<div class="w-100">
 		<video class="w-100 object-fit-cover rounded-2 mb-5" muted autoplay playsinline loop aria-label="Brandseal platform video 1">
-			<source src="imgs/builder/projects/brandseal-platform-video-1.mp4" type="video/mp4">
+			<source src="assets/builder/projects/brandseal-platform-video-1.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
 		<video class="w-100 object-fit-cover rounded-2" muted autoplay playsinline loop aria-label="Brandseal platform video 2">
-			<source src="imgs/builder/projects/brandseal-platform-video-2.mp4" type="video/mp4">
+			<source src="assets/builder/projects/brandseal-platform-video-2.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
 	</div>
@@ -74,7 +74,7 @@ var founderhoodContent = `
 	<h3 class="mb-4">Co-founder | CTO & CPO, Founderhood</h3>
 	<div class="w-100">
 		<video class="w-100 object-fit-cover rounded-2 mb-4" muted autoplay playsinline loop aria-label="Founderhood video">
-			<source src="imgs/builder/projects/founderhood-video.mp4" type="video/mp4">
+			<source src="assets/builder/projects/founderhood-video.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
 	</div>
@@ -82,30 +82,30 @@ var founderhoodContent = `
 		<div>
 			<h6 class="fs-09">Tech & tools used</h6>
 			<div class="tech-logos-grid tech-logos-grid--8-cols">
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="PHP"><img src="imgs/builder/tech_logos/php-logo.svg" alt="PHP"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Laravel"><img src="imgs/builder/tech_logos/laravel-logo.svg" alt="Laravel"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="MySQL"><img src="imgs/builder/tech_logos/mysql-logo.svg" alt="MySQL"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Bootstrap"><img src="imgs/builder/tech_logos/bootstrap-logo.svg" alt="Bootstrap"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="JavaScript"><img src="imgs/builder/tech_logos/javascript-logo.svg" alt="JavaScript"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="jQuery"><img src="imgs/builder/tech_logos/jquery-logo.svg" alt="jQuery"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Git"><img src="imgs/builder/tech_logos/git-logo.svg" alt="Git"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="GitHub"><img src="imgs/builder/tech_logos/github-logo.svg" alt="GitHub"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="MariaDB"><img src="imgs/builder/tech_logos/mariadb-logo.svg" alt="MariaDB"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="HTML5"><img src="imgs/builder/tech_logos/html5-logo.svg" alt="HTML5"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="CSS3"><img src="imgs/builder/tech_logos/css3-logo.svg" alt="CSS3"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="PHP"><img src="assets/builder/tech_logos/php-logo.svg" alt="PHP"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Laravel"><img src="assets/builder/tech_logos/laravel-logo.svg" alt="Laravel"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="MySQL"><img src="assets/builder/tech_logos/mysql-logo.svg" alt="MySQL"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Bootstrap"><img src="assets/builder/tech_logos/bootstrap-logo.svg" alt="Bootstrap"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="JavaScript"><img src="assets/builder/tech_logos/javascript-logo.svg" alt="JavaScript"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="jQuery"><img src="assets/builder/tech_logos/jquery-logo.svg" alt="jQuery"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Git"><img src="assets/builder/tech_logos/git-logo.svg" alt="Git"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="GitHub"><img src="assets/builder/tech_logos/github-logo.svg" alt="GitHub"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="MariaDB"><img src="assets/builder/tech_logos/mariadb-logo.svg" alt="MariaDB"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="HTML5"><img src="assets/builder/tech_logos/html5-logo.svg" alt="HTML5"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="CSS3"><img src="assets/builder/tech_logos/css3-logo.svg" alt="CSS3"></div>
 			</div>
 		</div>
 		<div>
 			<h6 class="fs-09">Integrations</h6>
 			<div class="tech-logos-grid tech-logos-grid--8-cols">
-				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Slack"><img class="w-75" src="imgs/builder/tech_logos/slack-full-logo.svg" alt="Slack"></div>
-				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Outlook Calendar"><img src="imgs/builder/tech_logos/outlook-calendar-logo.svg" alt="Outlook Calendar"></div>
-				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Google Calendar"><img src="imgs/builder/tech_logos/google-calendar-logo.svg" alt="Google Calendar"></div>
-				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Zapier"><img src="imgs/builder/tech_logos/zapier-logo.svg" alt="Zapier"></div>
-				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="SendGrid"><img class="w-75" src="imgs/builder/tech_logos/sendgrid-logo.svg" alt="SendGrid"></div>
-				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Zoom"><img class="w-75" src="imgs/builder/tech_logos/zoom-logo.svg" alt="Zoom"></div>
-				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Daily"><img class="w-75" src="imgs/builder/tech_logos/daily-logo.svg" alt="Daily"></div>
-				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Pusher"><img class="w-75" src="imgs/builder/tech_logos/pusher-logo.svg" alt="Pusher"></div>
+				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Slack"><img class="w-75" src="assets/builder/tech_logos/slack-full-logo.svg" alt="Slack"></div>
+				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Outlook Calendar"><img src="assets/builder/tech_logos/outlook-calendar-logo.svg" alt="Outlook Calendar"></div>
+				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Google Calendar"><img src="assets/builder/tech_logos/google-calendar-logo.svg" alt="Google Calendar"></div>
+				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Zapier"><img src="assets/builder/tech_logos/zapier-logo.svg" alt="Zapier"></div>
+				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="SendGrid"><img class="w-75" src="assets/builder/tech_logos/sendgrid-logo.svg" alt="SendGrid"></div>
+				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Zoom"><img class="w-75" src="assets/builder/tech_logos/zoom-logo.svg" alt="Zoom"></div>
+				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Daily"><img class="w-75" src="assets/builder/tech_logos/daily-logo.svg" alt="Daily"></div>
+				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Pusher"><img class="w-75" src="assets/builder/tech_logos/pusher-logo.svg" alt="Pusher"></div>
 			</div>
 		</div>
 		<div>
@@ -131,11 +131,11 @@ var founderhoodContent = `
 	</div>
 	<div class="w-100">
 		<video class="w-100 object-fit-cover rounded-2 mb-5" muted autoplay playsinline loop aria-label="Founderhood platform video 1">
-			<source src="imgs/builder/projects/founderhood-platform-video-1.mp4" type="video/mp4">
+			<source src="assets/builder/projects/founderhood-platform-video-1.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
 		<video class="w-100 object-fit-cover rounded-2" muted autoplay playsinline loop aria-label="Founderhood platform video 2">
-			<source src="imgs/builder/projects/founderhood-platform-video-2.mp4" type="video/mp4">
+			<source src="assets/builder/projects/founderhood-platform-video-2.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
 	</div>
@@ -147,7 +147,7 @@ var variousWebProjectsContent = `
 		<h3 class="mb-4">Initiator & tech lead | Startup Universe</h3>
 		<div class="w-100">
 			<video class="w-100 object-fit-cover rounded-2 mb-4" muted autoplay playsinline loop aria-label="Startup Universe landing page video">
-				<source src="imgs/builder/projects/gsu-video.mp4" type="video/mp4">
+				<source src="assets/builder/projects/gsu-video.mp4" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
 		</div>
@@ -177,21 +177,21 @@ var variousWebProjectsContent = `
 		<h3 class="mb-4">Co-founder (Product - Front - Design) | PartyBuzz </h3>
 		<div class="mb-4">
 			<div class="mb-5">
-				<img class="img-fluid rounded-2" src="imgs/builder/projects/partybuzz-user-profile.png" alt="PartyBuzz logo">
+				<img class="img-fluid rounded-2" src="assets/builder/projects/partybuzz-user-profile.png" alt="PartyBuzz logo">
 				<figcaption class="figure-caption mt-2">User's profile page with limited invitations. Whole platform was invitation-only to curate the initial community.</figcaption>
 			</div>
 			<div>
-				<img class="img-fluid rounded-2" src="imgs/builder/projects/partybuzz-contibutions-invitation-modals.png" alt="PartyBuzz logo">
+				<img class="img-fluid rounded-2" src="assets/builder/projects/partybuzz-contibutions-invitation-modals.png" alt="PartyBuzz logo">
 				<figcaption class="figure-caption mt-2">Group "asking" invitation for a party & contributions requests.</figcaption>
 			</div>
 		</div>
 		<div class="bg-white border rounded-2 p-4">
 			<h6 class="fs-09">Tech & tools used</h6>
 			<div class="tech-logos-grid tech-logos-grid--8-cols">
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Django"><img src="imgs/builder/tech_logos/django-logo.svg" alt="Django"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="JavaScript"><img src="imgs/builder/tech_logos/javascript-logo.svg" alt="JavaScript"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="jQuery"><img src="imgs/builder/tech_logos/jquery-logo.svg" alt="jQuery"></div>
-				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="PostgreSQL"><img src="imgs/builder/tech_logos/postgresql-logo.svg" alt="PostgreSQL"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Django"><img src="assets/builder/tech_logos/django-logo.svg" alt="Django"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="JavaScript"><img src="assets/builder/tech_logos/javascript-logo.svg" alt="JavaScript"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="jQuery"><img src="assets/builder/tech_logos/jquery-logo.svg" alt="jQuery"></div>
+				<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="PostgreSQL"><img src="assets/builder/tech_logos/postgresql-logo.svg" alt="PostgreSQL"></div>
 			</div>
 		</div>
 		<div class="col-12 col-xl-10 mx-auto mt-5">

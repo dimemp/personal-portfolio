@@ -129,6 +129,42 @@ $(function () {
 		});
 	})();
 
+	// --- Stat counter animation ---
+	(function () {
+		var $stats = $('.stat-number[data-target]');
+		if (!$stats.length) return;
+
+		function animateCount($el) {
+			var target = parseInt($el.data('target'), 10),
+				suffix = $el.data('suffix') || '',
+				duration = 2000,
+				start = null;
+
+			function step(timestamp) {
+				if (!start) start = timestamp;
+				var progress = Math.min((timestamp - start) / duration, 1);
+				var eased = 1 - Math.pow(1 - progress, 3);
+				var current = Math.round(eased * target);
+				$el.text(current + (progress === 1 ? suffix : ''));
+				if (progress < 1) requestAnimationFrame(step);
+			}
+
+			requestAnimationFrame(step);
+		}
+
+		var observer = new IntersectionObserver(function (entries) {
+			entries.forEach(function (entry) {
+				if (!entry.isIntersecting) return;
+				var $el = $(entry.target);
+				if ($el.data('counted')) return;
+				$el.data('counted', true);
+				animateCount($el);
+			});
+		}, { threshold: 0.5 });
+
+		$stats.each(function () { observer.observe(this); });
+	})();
+
 	// --- Tech logos: swap heading text on hover ---
 	(function () {
 		var $label = $('#tech-logos-label');

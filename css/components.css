@@ -54,7 +54,14 @@
 
 .tech-logos-grid {
 	display: grid;
+}
+
+.tech-logos-grid--3-cols {
 	grid-template-columns: repeat(3, 1fr);
+}
+
+.tech-logos-grid--4-cols {
+	grid-template-columns: repeat(4, 1fr);
 }
 
 .tech-logos-grid--8-cols {
@@ -68,7 +75,8 @@
 		grid-template-columns: repeat(3, 1fr)!important;
 	}
 
-	.tech-logos-grid {
+	.tech-logos-grid--3-cols,
+	.tech-logos-grid--4-cols {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
@@ -115,7 +123,7 @@
 	font-weight: 600;
 	letter-spacing: -0.04em;
 	line-height: 1;
-	background: linear-gradient(to bottom, rgba(10, 10, 10, 0.1), rgba(10, 10, 10, 0.01));
+	background: linear-gradient(to bottom, rgba(0, 135, 254, 0.2), rgba(0, 135, 254, 0.01));
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;

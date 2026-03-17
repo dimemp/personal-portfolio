@@ -31,7 +31,7 @@ var brandsealContent = `
 		</div>
 		<div>
 			<h6 class="fs-09">Integrations</h6>
-			<div class="col-12 col-lg-8 tech-logos-grid">
+			<div class="col-12 col-lg-8 tech-logos-grid tech-logos-grid--3-cols">
 				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Google Workspace"><img src="assets/builder/tech_logos/google-workspace-full-logo.svg" alt="Google Workspace"></div>
 				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Notion"><img src="assets/builder/tech_logos/notion-full-logo.svg" alt="Notion"></div>
 				<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Slack"><img src="assets/builder/tech_logos/slack-full-logo.svg" alt="Slack"></div>

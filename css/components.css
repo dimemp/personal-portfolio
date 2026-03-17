@@ -123,7 +123,7 @@
 	font-weight: 600;
 	letter-spacing: -0.04em;
 	line-height: 1;
-	background: linear-gradient(to bottom, rgba(0, 135, 254, 0.2), rgba(0, 135, 254, 0.01));
+	background: linear-gradient(to bottom, rgba(0, 132, 255, 0.2), rgba(0, 132, 255, 0.01));
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -249,4 +249,57 @@
 
 .toggle-tabs .nav-link.active .tab-label {
 	color: var(--dd-body);
+}
+
+/* Button beam — offset-path border beam (constant width + speed) */
+
+.btn-shimmer-wrap {
+	display: inline-block;
+	position: relative;
+	border-radius: var(--dd-pill);
+	overflow: hidden;
+}
+
+.btn-shimmer-wrap::before {
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to left, transparent, var(--dd-beam-color-soft), var(--dd-beam-color), transparent);
+	offset-path: rect(0 auto auto 0 round var(--dd-pill));
+	offset-distance: 0%;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.btn-shimmer-wrap::after {
+	content: "";
+	position: absolute;
+	inset: 1.25px;
+	border-radius: inherit;
+	background: var(--bs-body-bg);
+	pointer-events: none;
+}
+
+.btn-shimmer-wrap .btn {
+	position: relative;
+	z-index: 2;
+}
+
+.split-card:not(.is-dimmed) .btn-shimmer-wrap::before {
+	opacity: 1;
+	animation: beam-travel 2.8s linear infinite;
+}
+
+.split-card.is-dimmed .btn-shimmer-wrap::before {
+	opacity: 0;
+	animation: none;
+}
+
+@keyframes beam-travel {
+	to {
+		offset-distance: 100%;
+	}
 }

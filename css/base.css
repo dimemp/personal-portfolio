@@ -37,6 +37,8 @@ html {
 	--dd-overlay: rgba(10, 10, 10, 0.05);
 	--dd-rule: rgba(10, 10, 10, 0.05);
 	--dd-pill: 50rem;
+	--dd-beam-color: rgba(0, 132, 255, 1);
+	--dd-beam-color-soft: rgba(0, 132, 255, 0.6);
 	--dd-gap-y: 3rem;
 	--dd-gap-y-lg: 5rem;
 }
@@ -210,16 +212,16 @@ a:focus-visible {
         border-radius: 0.5rem;
     }
 
-    .nav-item {
+    .navbar .nav-item {
         padding: .5rem;
         border-top: solid 1px var(--dd-overlay);
     }
 
-    .nav-item:first-child {
+    .navbar .nav-item:first-child {
         border-top: 0;   
     }
 
-    .nav-item:last-child {
+    .navbar .nav-item:last-child {
         border-bottom: solid 1px var(--dd-overlay);   
     }
 
@@ -241,7 +243,7 @@ a:focus-visible {
         box-shadow: 0 7px 10px -7px rgb(44 50 66 / 8%);
     }
 
-    .nav-item:first-child {
+    .navbar .nav-item:first-child {
         border-top: solid 1px var(--dd-overlay);  
     }
 

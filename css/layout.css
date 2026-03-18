@@ -1,12 +1,18 @@
 /* --- Split row, vertical divider, portrait, footer --- */
 
+/* Index page btns profile more */
+
+.btn-landing-profile-more {
+	width: 150px;
+}
+
 /* Split row (vertical divider + portrait) */
 
 .split-card {
 	min-height: auto;
 }
 
-/* On mobile, hide the inactive tab content so only one card (title/text/btn) shows; desktop overrides below */
+/* On mobile, hide the inactive tab content so only one card (title/text/btn) */
 .split-card.is-dimmed {
 	display: none !important;
 }
@@ -57,7 +63,7 @@
 	transform: translate(50%, -50%);
 }
 
-/* Vertical divider (lg+ only) */
+/* Vertical divider */
 
 @media (min-width: 992px) {
 
@@ -121,6 +127,10 @@
 }
 
 /* Project split-row mobile separators */
+
+.project-split-row {
+	min-height: 450px;
+}
 
 @media (min-width: 992px) {
 

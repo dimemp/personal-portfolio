@@ -39,6 +39,7 @@ html {
 	--dd-pill: 50rem;
 	--dd-beam-color: rgba(0, 132, 255, 1);
 	--dd-beam-color-soft: rgba(0, 132, 255, 0.6);
+	--dd-beam-speed: 1.5s;
 	--dd-gap-y: 3rem;
 	--dd-gap-y-lg: 5rem;
 }
@@ -202,7 +203,6 @@ a:focus-visible {
 
 .navbar .nav-link.active {
 	color: var(--dd-ink);
-	font-weight: 600;
 }
 
 @media (max-width: 992px) {

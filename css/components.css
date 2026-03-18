@@ -251,55 +251,106 @@
 	color: var(--dd-body);
 }
 
-/* Button beam — offset-path border beam (constant width + speed) */
+/* Button beam */
 
 .btn-shimmer-wrap {
-	display: inline-block;
 	position: relative;
 	border-radius: var(--dd-pill);
 	overflow: hidden;
 }
 
-.btn-shimmer-wrap::before {
-	content: "";
+.btn-beam-track {
 	position: absolute;
-	width: 50px;
-	height: 50px;
 	top: 0;
 	left: 0;
-	background: linear-gradient(to left, transparent, var(--dd-beam-color-soft), var(--dd-beam-color), transparent);
-	offset-path: rect(0 auto auto 0 round var(--dd-pill));
-	offset-distance: 0%;
+	right: 0;
+	bottom: -1px;
+	height: calc(100% + 1px);
+	container-type: size;
+	overflow: visible;
+	pointer-events: none;
+}
+
+.btn-beam {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	height: 100cqh;
+	aspect-ratio: 1;
+	overflow: visible;
 	opacity: 0;
 	pointer-events: none;
+}
+
+.btn-beam::before {
+	content: "";
+	position: absolute;
+	inset: -100%;
+	background: conic-gradient(
+		from 225deg,
+		transparent 0,
+		var(--dd-beam-color-soft) 32deg,
+		var(--dd-beam-color) 65deg,
+		transparent 100deg
+	);
 }
 
 .btn-shimmer-wrap::after {
 	content: "";
 	position: absolute;
-	inset: 1.25px;
+	inset: .7px;
 	border-radius: inherit;
 	background: var(--bs-body-bg);
 	pointer-events: none;
+	z-index: 1;
+	transition: background 0.2s ease;
 }
 
-.btn-shimmer-wrap .btn {
+.btn-shimmer-wrap:hover::after {
+	color: var(--bs-btn-hover-color);
+	background: var(--bs-btn-hover-bg);
+	border-color: var(--bs-btn-hover-border-color);
+}
+
+.btn-shimmer-wrap .btn-shimmer-label {
 	position: relative;
 	z-index: 2;
 }
 
-.split-card:not(.is-dimmed) .btn-shimmer-wrap::before {
+.project-split-row:hover .btn-beam {
 	opacity: 1;
-	animation: beam-travel 2.8s linear infinite;
+	animation: beam-slide var(--dd-beam-speed) ease-in-out infinite alternate;
 }
 
-.split-card.is-dimmed .btn-shimmer-wrap::before {
+.project-split-row:hover .btn-beam::before {
+	animation: beam-spin calc(var(--dd-beam-speed) * 2) infinite linear;
+}
+
+.split-card:not(.is-dimmed) .btn-beam {
+	opacity: 1;
+	animation: beam-slide var(--dd-beam-speed) ease-in-out infinite alternate;
+}
+
+.split-card:not(.is-dimmed) .btn-beam::before {
+	animation: beam-spin calc(var(--dd-beam-speed) * 2) infinite linear;
+}
+
+.split-card.is-dimmed .btn-beam {
 	opacity: 0;
 	animation: none;
 }
 
-@keyframes beam-travel {
+@keyframes beam-slide {
 	to {
-		offset-distance: 100%;
+		transform: translate(calc(100cqw - 100%), 0);
 	}
+}
+
+@keyframes beam-spin {
+	0% { rotate: 0deg; }
+	15%, 35% { rotate: 90deg; }
+	65%, 85% { rotate: 270deg; }
+	100% { rotate: 360deg; }
 }

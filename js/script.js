@@ -39,6 +39,12 @@ $(function () {
 		});
 	}
 
+	// Click on btns to navigate to other pages or modal
+	$('[data-href]').on('click', function () {
+		window.location.href = $(this).data('href');
+	});
+
+	// Click on "Learn more" btn to open modal
 	$('.btn-learn-more').on('click', function (e) {
 		e.preventDefault();
 		var idx = parseInt($(this).data('project'), 10);

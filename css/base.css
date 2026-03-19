@@ -18,12 +18,13 @@ html {
 	--bs-body-font-size: 1rem;
 	--bs-body-font-weight: 400;
 	--bs-body-line-height: 1.6;
-	--bs-body-color: #717171;
+	--bs-body-color: #262625;
 	--bs-body-bg: #FBFBFB;
 	--dd-bg-dark: #f5f3f1;
 	--bs-border-radius: 0.5rem;
 	--bs-border-radius-sm: 0.25rem;
 	--bs-border-radius-lg: 0.75rem;
+	--bs-border-color: #D5D4D3;
 	--dd-ink: #0A0A0A;
 	--dd-surface: #FBFBFB;
 	--dd-muted: #F0F0EF;
@@ -31,7 +32,7 @@ html {
 	--dd-border: #D5D4D3;
 	--dd-dim: #B8B7B6;
 	--dd-faded: #737271;
-	--dd-body: #717171;
+	--dd-body: #262625;
 	--dd-strong: #3A3A39;
 	--dd-heading: #262625;
 	--dd-overlay: rgba(10, 10, 10, 0.05);

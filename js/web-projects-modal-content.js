@@ -12,7 +12,7 @@ var brandsealContent = `
 		<span class="band-dot band-dot--start position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 		<span class="band-dot band-dot--end position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 
-		<div class="px-2 px-lg-4 my-5">
+		<div class="px-3 px-lg-4 my-5">
 			<h6 class="fs-09 text-muted">Nov 2025 - Present</h6>
 			<h3 class="mb-4">Brandseal (by Wispit Ventures)</h3>
 		</div>
@@ -74,7 +74,7 @@ var brandsealContent = `
 			<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 			<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 
-			<div class="col-12 col-xl-7 py-7 mx-auto">
+			<div class="col-12 col-xl-8 px-3 py-7 mx-auto">
 				<h6 class="mb-3">TL;DR</h6>
 				<ul class="mb-4">
 					<li>Engineering: 50,000+ lines of code built on Laravel/PHP</li>
@@ -127,7 +127,7 @@ var founderhoodContent = `
 		<span class="band-dot band-dot--start position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 		<span class="band-dot band-dot--end position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 
-		<div class="px-2 px-lg-4 my-5">
+		<div class="px-3 px-lg-4 my-5">
 			<h6 class="fs-09 text-muted">Nov 2018 - Nov 2025</h6>
 			<h3 class="mb-4">Co-founder | CTO & CPO, Founderhood</h3>
 		</div>
@@ -194,7 +194,7 @@ var founderhoodContent = `
 			<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 			<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 
-			<div class="col-12 col-xl-7 py-7 mx-auto">
+			<div class="col-12 col-xl-8 px-3 py-7 mx-auto">
 				<h6 class="mb-3">TL;DR</h6>
 				<ul class="mb-4">
 					<li>Scale: Powering 2,300+ startups and 5,000+ total users since 2018</li>
@@ -241,7 +241,7 @@ var founderhoodContent = `
 `;
 
 var variousWebProjectsContent = `
-	<div class="project-modal-band band band-rule position-relative overflow-visible pb-0">
+	<div class="project-modal-band band band-rule position-relative overflow-visible">
 
 			<span class="rule-left"></span>
 			<span class="rule-center"></span>
@@ -249,7 +249,7 @@ var variousWebProjectsContent = `
 			<span class="band-dot band-dot--start position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 			<span class="band-dot band-dot--end position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 
-			<div class="px-2 px-lg-4 my-5">
+			<div class="px-3 px-lg-4 my-5">
 				<h6 class="fs-09 text-muted">Oct 2020 - May 2022</h6>
 				<h3 class="mb-4">Initiator & tech lead | Startup Universe</h3>
 			</div>
@@ -290,7 +290,7 @@ var variousWebProjectsContent = `
 				<span class="tech-logos-box-rule"></span>
 				<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
-				<div class="col-12 col-xl-7 py-7 mx-auto">
+				<div class="col-12 col-xl-8 px-3 py-7 mx-auto">
 					<h6 class="mb-3">Description</h6>
 					<p class="mb-0">I designed the brand identity and the digital gateway for this international program. The logo, three interlocking circles, symbolizes the connection between Greeks in Greece, Cyprus, and the global Diaspora. I built the landing page using HTML and CSS, integrating Airtable for form submissions. I also used Adobe After Effects to produce the hero section video.</p>
 				</div>
@@ -306,7 +306,7 @@ var variousWebProjectsContent = `
 			<span class="band-dot band-dot--start position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 			<span class="band-dot band-dot--end position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 
-			<div class="px-2 px-lg-4 my-5">
+			<div class="px-3 px-lg-4 my-5">
 				<h6 class="fs-09 text-muted">May 2015 - Dec 2016</h6>
 				<h3 class="mb-4">Co-founder (Product - Front - Design) | PartyBuzz </h3>
 			</div>
@@ -346,7 +346,7 @@ var variousWebProjectsContent = `
 				<span class="tech-logos-box-rule"></span>
 				<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
-				<div class="col-12 col-xl-7 py-7 mx-auto">
+				<div class="col-12 col-xl-8 px-3 py-7 mx-auto">
 					<h6 class="mb-3">Description</h6>
 					<p>Partybuzz was my first deep dive into the Greek startup ecosystem. More than a simple RSVP tool, we built a platform for crowdsourced party at homes logistics, allowing organizers to request specific in-kind or financial contributions from guests to fund their parties. We also engineered a unique "Group RSVP" feature, a first for the time,where users could join parties as a collective, requiring the host to accept the entire group or none at all.</p>
 					<p class="mb-0">Built with Django, JS, jQuery, and PostgreSQL, I led a team of two developers and managed the branding (except the logo) and web design. This project anticipated the "collaborative social" trend currently dominated by apps like <a href="https://partiful.com/" target="_blank">Partiful</a> (which has raised $27.3M, including a Series A led by a16z).</p>

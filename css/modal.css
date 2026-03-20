@@ -90,15 +90,13 @@ body.modal-open {
 }
 
 .project-modal-close {
-	z-index: 10;
-	width: 36px;
-	height: 36px;
-	border-color: var(--dd-subtle);
-	background: var(--dd-surface);
+	top: 0.35rem;
+  	right: 0.5rem;
+	width: 35px;
+	height: 35px;
 	color: var(--dd-heading);
 	cursor: pointer;
 	transition: background 0.15s, border-color 0.15s;
-	font-size: 0.875rem;
 }
 
 .project-modal-close:hover {

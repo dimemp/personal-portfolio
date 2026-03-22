@@ -1,0 +1,6 @@
+baseURL = 'https://dimemp.github.io/personal-portfolio/'
+locale = 'en-us'
+title = 'Dimitris Dimosiaris | Personal Portfolio and Website'
+
+# No tag/category pages; avoids "no layout for taxonomy" warnings.
+disableKinds = ['taxonomy', 'term']

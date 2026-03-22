@@ -1,0 +1,28 @@
+<script>
+window.HUGO_STATIC_ROOT = {{ printf "%q" (string site.Home.RelPermalink) | safeJS }};
+window.hugoStaticURL = function (path) {
+	var root = window.HUGO_STATIC_ROOT ? String(window.HUGO_STATIC_ROOT) : '/';
+	if (!root.endsWith('/')) root += '/';
+	return root + String(path).replace(/^\//, '');
+};
+</script>
+{{- range slice "jquery.min.js" "poper.min.js" "bootstrap.min.js" }}
+    {{- with resources.Get (printf "js/%s" .) }}
+        <script src="{{ .RelPermalink }}"></script>
+    {{- end }}
+{{- end }}
+
+{{- if eq .Type "builder" }}
+    {{- with resources.Get "js/web-projects-modal-content.js" }}
+        <script src="{{ .RelPermalink }}"></script>
+    {{- end }}
+
+{{- else if eq .Type "communities" }}
+    {{- with resources.Get "js/communities-modal-content.js" }}
+        <script src="{{ .RelPermalink }}"></script>
+    {{- end }}
+{{- end }}
+
+{{- with resources.Get "js/script.js" }}
+    <script src="{{ .RelPermalink }}"></script>    
+{{- end }}

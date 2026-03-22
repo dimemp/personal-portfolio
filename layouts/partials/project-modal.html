@@ -1,0 +1,28 @@
+<div class="modal fade overflow-hidden" id="projectModal" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog project-modal-dialog d-flex align-items-end min-vh-100">
+		<div class="modal-content project-modal-panel d-flex flex-column overflow-hidden">
+
+			<div class="project-modal-handle d-flex justify-content-center flex-shrink-0 d-lg-none">
+				<span class="handle-bar"></span>
+			</div>
+
+			<button class="project-modal-close position-absolute d-flex align-items-center justify-content-center rounded-circle fs-0875 bg-white border" type="button" data-bs-dismiss="modal" aria-label="Close modal">
+				<i class="bi bi-x-lg"></i>
+			</button>
+
+			<div class="project-modal-nav-bar position-absolute bottom-0 start-50 translate-middle-x d-flex align-items-center flex-shrink-0 bg-white border shadow-sm rounded-pill z-3 py-2 px-3 mb-4">
+				<button class="btn btn-outline-primary project-modal-nav--prev border-0 py-1 px-2 text-nowrap flex-shrink-0" id="projectModalPrev" type="button" aria-label="Previous project">
+					<i class="bi bi-arrow-left-square me-2"></i>Previous
+				</button>
+				<button class="btn btn-outline-primary project-modal-nav--next border-0 py-1 px-2 ms-3 text-nowrap flex-shrink-0" id="projectModalNext" type="button" aria-label="Next project">
+					Next<i class="bi bi-arrow-right-square ms-2"></i>
+				</button>
+			</div>
+
+			<div class="project-modal-content d-flex flex-column overflow-auto flex-fill px-3 pb-0 px-lg-5 mt-3 mt-lg-5">
+				<div class="col-12 col-lg-10 col-xl-7 mx-auto" id="js-project-modal-content"></div>
+			</div>
+
+		</div>
+	</div>
+</div>

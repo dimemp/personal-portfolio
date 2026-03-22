@@ -1,0 +1,22 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dimitris Dimosiaris's personal portfolio and website.">
+    <meta name="author" content="Dimitris Dimosiaris">
+    <meta property="og:url" content="https://dimosiaris.com/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Dimitris Dimosiaris | Personal Portfolio and Website"/>
+    <meta property="og:site_name" content="Dimitris Dimosiaris | Personal Portfolio and Website"/>
+    <meta property="og:description" content="Dimitris Dimosiaris's personal portfolio and website."/>
+    <meta property="og:image" content="img/app_used/facebook_open_graph_dimosiaris.png" />
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | Dimitris Dimosiaris{{ end }}</title>
+    <link rel="icon" href="{{ "favicon.png" | relURL }}" sizes="32x32">
+    <link rel="icon" href="{{ "favicon_16.png" | relURL }}" sizes="16x16">
+    <link rel="stylesheet" href="{{ "fonts/fontfamily/dm-sans.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "fonts/bootstrapicons/bootstrap-icons.min.css" | relURL }}">
+    {{- range slice "bootstrap.min.css" "base.css" "components.css" "layout.css" "modal.css" }}
+        {{- with resources.Get (printf "css/%s" .) }}
+            <link rel="stylesheet" href="{{ .RelPermalink }}">
+        {{- end }}
+    {{- end }}
+</head>

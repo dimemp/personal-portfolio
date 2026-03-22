@@ -14,9 +14,15 @@
     <link rel="icon" href="{{ "favicon_16.png" | relURL }}" sizes="16x16">
     <link rel="stylesheet" href="{{ "fonts/fontfamily/dm-sans.css" | relURL }}">
     <link rel="stylesheet" href="{{ "fonts/bootstrapicons/bootstrap-icons.min.css" | relURL }}">
-    {{- range slice "bootstrap.min.css" "base.css" "components.css" "layout.css" "modal.css" }}
-        {{- with resources.Get (printf "css/%s" .) }}
-            <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{- $cssFiles := slice "css/bootstrap.min.css" "css/base.css" "css/components.css" "css/layout.css" "css/modal.css" }}
+    {{- $processedCSS := slice }}
+    {{- range $cssFiles }}
+        {{- with resources.Get . }}
+            {{- $processedCSS = $processedCSS | append . }}
         {{- end }}
+    {{- end }}
+    {{- with $processedCSS }}
+        {{- $bundle := . | resources.Concat "css/bundle.css" | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" crossorigin="anonymous" media="screen">
     {{- end }}
 </head>

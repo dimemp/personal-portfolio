@@ -6,23 +6,32 @@ window.hugoStaticURL = function (path) {
 	return root + String(path).replace(/^\//, '');
 };
 </script>
-{{- range slice "jquery.min.js" "poper.min.js" "bootstrap.min.js" }}
-    {{- with resources.Get (printf "js/%s" .) }}
-        <script src="{{ .RelPermalink }}"></script>
+{{- $bundleList := slice }}
+{{- range slice "js/jquery.min.js" "js/poper.min.js" "js/bootstrap.min.js" }}
+    {{- with resources.Get . }}
+        {{- $bundleList = $bundleList | append . }}
     {{- end }}
 {{- end }}
-
-{{- if eq .Type "builder" }}
+{{- $rel := strings.TrimSuffix "/" (.RelPermalink | lower) }}
+{{- $base := "" }}
+{{- with .File }}{{- $base = .ContentBaseName }}{{- end }}
+{{- $isBuilder := or (eq .Type "builder") (eq $base "builder") (strings.HasSuffix $rel "/builder") }}
+{{- $isCommunities := or (eq .Type "communities") (eq $base "communities") (strings.HasSuffix $rel "/communities") }}
+{{- if $isBuilder }}
     {{- with resources.Get "js/web-projects-modal-content.js" }}
-        <script src="{{ .RelPermalink }}"></script>
+        {{- $bundleList = $bundleList | append . }}
     {{- end }}
-
-{{- else if eq .Type "communities" }}
+{{- else if $isCommunities }}
     {{- with resources.Get "js/communities-modal-content.js" }}
-        <script src="{{ .RelPermalink }}"></script>
+        {{- $bundleList = $bundleList | append . }}
     {{- end }}
 {{- end }}
-
 {{- with resources.Get "js/script.js" }}
-    <script src="{{ .RelPermalink }}"></script>    
+    {{- $bundleList = $bundleList | append . }}
+{{- end }}
+{{- $bundleTarget := "js/bundle-core.js" }}
+{{- if $isBuilder }}{{- $bundleTarget = "js/bundle-builder.js" }}{{- else if $isCommunities }}{{- $bundleTarget = "js/bundle-communities.js" }}{{- end }}
+{{- with $bundleList }}
+    {{- $bundle := . | resources.Concat $bundleTarget | minify | fingerprint }}
+    <script src="{{ $bundle.RelPermalink }}"></script>
 {{- end }}

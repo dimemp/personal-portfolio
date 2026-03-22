@@ -1,0 +1,4 @@
+# Hugo Folders
+public/
+.hugo_build.lock
+hugo_stats.json

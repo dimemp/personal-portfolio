@@ -294,3 +294,43 @@ $(function () {
 	});
 
 });
+
+// After full page load, prefetch modal MP4s (builder bundle sets window.modalVideoPreloadPaths).
+(function () {
+	function startModalVideoPreload() {
+		var paths = window.modalVideoPreloadPaths;
+		if (!paths || !paths.length || typeof window.hugoStaticURL !== 'function' || !document.body)
+			return;
+
+		var holder = document.createElement('div');
+		holder.setAttribute('aria-hidden', 'true');
+		holder.style.cssText = 'position:absolute;width:0;height:0;margin:0;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0;white-space:nowrap;';
+
+		paths.forEach(function (path) {
+			var v = document.createElement('video');
+			v.preload = 'auto';
+			v.muted = true;
+			v.defaultMuted = true;
+			v.setAttribute('playsinline', '');
+			v.setAttribute('aria-hidden', 'true');
+			var s = document.createElement('source');
+			s.src = window.hugoStaticURL(path);
+			s.type = 'video/mp4';
+			v.appendChild(s);
+			holder.appendChild(v);
+			v.load();
+		});
+
+		document.body.appendChild(holder);
+	}
+
+	function scheduleModalVideoPreload() {
+		if (window.requestIdleCallback)
+			window.requestIdleCallback(function () { startModalVideoPreload(); }, { timeout: 8000 });
+		else
+			setTimeout(startModalVideoPreload, 1);
+	}
+
+	if (window.addEventListener)
+		window.addEventListener('load', scheduleModalVideoPreload);
+})();

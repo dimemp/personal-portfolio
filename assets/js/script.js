@@ -14,9 +14,113 @@ $(function () {
 		$modalContent = $('#js-project-modal-content'),
 		projectModalContent = window.communitiesModalContent || window.webProjectsModalContent,
 		hasProjectModalContent = projectModalContent && projectModalContent.length && $modalContent.length,
-		bsModal = modalEl ? new bootstrap.Modal(modalEl) : null;
+		bsModal = modalEl ? new bootstrap.Modal(modalEl) : null,
+		modalVideoObserver = null,
+		modalScrollPlayRaf = null;
+
+	function disconnectModalVideoObserver() {
+		if (modalVideoObserver) {
+			modalVideoObserver.disconnect();
+			modalVideoObserver = null;
+		}
+	}
+
+	function tryPlayModalVideo(v) {
+		v.muted = true;
+		v.defaultMuted = true;
+		v.setAttribute('muted', '');
+		v.setAttribute('playsinline', '');
+		function go() {
+			var p = v.play();
+			if (p && typeof p.catch === 'function')
+				p.catch(function () {});
+		}
+		go();
+		if (v.readyState >= 2)
+			return;
+		if (v.dataset.modalAwaitingPlay === '1')
+			return;
+		v.dataset.modalAwaitingPlay = '1';
+		v.addEventListener(
+			'error',
+			function () {
+				delete v.dataset.modalAwaitingPlay;
+			},
+			{ once: true }
+		);
+		v.addEventListener(
+			'canplay',
+			function () {
+				delete v.dataset.modalAwaitingPlay;
+				go();
+			},
+			{ once: true }
+		);
+		if (v.readyState === 0)
+			v.load();
+	}
+
+	function videoIntersectsModalScrollRoot(v, scrollRoot) {
+		var r = v.getBoundingClientRect(),
+			sr = scrollRoot.getBoundingClientRect();
+		return r.width > 0 && r.height > 0 && r.bottom > sr.top && r.top < sr.bottom && r.right > sr.left && r.left < sr.right;
+	}
+
+	function initModalVideosPlayback() {
+		disconnectModalVideoObserver();
+		if (!modalEl) return;
+		var scrollRoot = modalEl.querySelector('.project-modal-content'),
+			inner = document.getElementById('js-project-modal-content');
+		if (!scrollRoot || !inner) return;
+
+		var videos = inner.querySelectorAll('video');
+		if (!videos.length) return;
+
+		function playIfVisible() {
+			videos.forEach(function (v) {
+				if (videoIntersectsModalScrollRoot(v, scrollRoot))
+					tryPlayModalVideo(v);
+			});
+		}
+
+		if (!('IntersectionObserver' in window)) {
+			playIfVisible();
+			return;
+		}
+
+		modalVideoObserver = new IntersectionObserver(
+			function (entries) {
+				entries.forEach(function (entry) {
+					if (entry.isIntersecting)
+						tryPlayModalVideo(entry.target);
+					else
+						entry.target.pause();
+				});
+			},
+			{ root: scrollRoot, rootMargin: '40px 0px', threshold: 0.01 }
+		);
+
+		videos.forEach(function (v) {
+			modalVideoObserver.observe(v);
+		});
+
+		requestAnimationFrame(function () {
+			requestAnimationFrame(function () {
+				playIfVisible();
+				setTimeout(playIfVisible, 200);
+				setTimeout(playIfVisible, 600);
+			});
+		});
+	}
+
+	function scheduleInitModalVideos() {
+		requestAnimationFrame(function () {
+			requestAnimationFrame(initModalVideosPlayback);
+		});
+	}
 
 	function renderProject(index) {
+		disconnectModalVideoObserver();
 		currentProjectIndex = index;
 		if (hasProjectModalContent) {
 			var content = projectModalContent[index];
@@ -24,6 +128,8 @@ $(function () {
 				$modalContent.html(content);
 		}
 		$('.project-modal-content').scrollTop(0);
+		if ($modal.hasClass('show'))
+			scheduleInitModalVideos();
 	}
 
 	function openModal(index) {
@@ -34,8 +140,33 @@ $(function () {
 	if (modalEl) {
 		modalEl.addEventListener('shown.bs.modal', function () {
 			$('.project-modal-content').scrollTop(0);
+			scheduleInitModalVideos();
+		});
+		modalEl.addEventListener('hidden.bs.modal', function () {
+			disconnectModalVideoObserver();
+			var inner = document.getElementById('js-project-modal-content');
+			if (inner)
+				inner.querySelectorAll('video').forEach(function (v) {
+					v.pause();
+				});
 		});
 	}
+
+	$('.project-modal-content').on('scroll', function () {
+		if (!$modal.hasClass('show')) return;
+		var scrollRoot = this;
+		if (modalScrollPlayRaf)
+			return;
+		modalScrollPlayRaf = requestAnimationFrame(function () {
+			modalScrollPlayRaf = null;
+			var inner = document.getElementById('js-project-modal-content');
+			if (!inner) return;
+			inner.querySelectorAll('video').forEach(function (v) {
+				if (videoIntersectsModalScrollRoot(v, scrollRoot) && v.paused)
+					tryPlayModalVideo(v);
+			});
+		});
+	});
 
 	// Click on btns to navigate to other pages or modal
 	$('[data-href]').on('click', function () {

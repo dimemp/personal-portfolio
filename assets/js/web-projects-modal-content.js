@@ -21,7 +21,7 @@ var brandsealContent = `
 			<span class="tech-logos-box-rule"></span>
 			<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 			<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
-			<video class="w-100 object-fit-cover rounded-3" muted autoplay playsinline loop aria-label="Brandseal video">
+			<video class="w-100 object-fit-cover rounded-3" preload="auto" muted autoplay playsinline loop aria-label="Brandseal video">
 				<source src="${hugoStaticURL('builder/projects/brandseal-video.mp4')}" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
@@ -95,7 +95,7 @@ var brandsealContent = `
 					<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 					<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 
-					<video class="w-100 object-fit-cover rounded-3" muted autoplay playsinline loop aria-label="Brandseal platform video 1">
+					<video class="w-100 object-fit-cover rounded-3" preload="auto" muted autoplay playsinline loop aria-label="Brandseal platform video 1">
 						<source src="${hugoStaticURL('builder/projects/brandseal-platform-video-1.mp4')}" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
@@ -126,7 +126,7 @@ var founderhoodContent = `
 			<span class="tech-logos-box-rule"></span>
 			<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 			<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
-			<video class="w-100 object-fit-cover rounded-3" muted autoplay playsinline loop aria-label="Founderhood video">
+			<video class="w-100 object-fit-cover rounded-3" preload="auto" muted autoplay playsinline loop aria-label="Founderhood video">
 				<source src="${hugoStaticURL('builder/projects/founderhood-video.mp4')}" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
@@ -207,7 +207,7 @@ var founderhoodContent = `
 					<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 					<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 
-					<video class="w-100 object-fit-cover rounded-3" muted autoplay playsinline loop aria-label="Founderhood platform video 1">
+					<video class="w-100 object-fit-cover rounded-3" preload="auto" muted autoplay playsinline loop aria-label="Founderhood platform video 1">
 						<source src="${hugoStaticURL('builder/projects/founderhood-platform-video-1.mp4')}" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
@@ -217,7 +217,7 @@ var founderhoodContent = `
 					<span class="tech-logos-box-rule"></span>
 					<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 					<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
-					<video class="w-100 object-fit-cover rounded-3" muted autoplay playsinline loop aria-label="Founderhood platform video 2">
+					<video class="w-100 object-fit-cover rounded-3" preload="auto" muted autoplay playsinline loop aria-label="Founderhood platform video 2">
 						<source src="${hugoStaticURL('builder/projects/founderhood-platform-video-2.mp4')}" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
@@ -248,7 +248,7 @@ var variousWebProjectsContent = `
 				<span class="tech-logos-box-rule"></span>
 				<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
-				<video class="w-100 object-fit-cover rounded-3" muted autoplay playsinline loop aria-label="Startup Universe landing page video">
+				<video class="w-100 object-fit-cover rounded-3" preload="auto" muted autoplay playsinline loop aria-label="Startup Universe landing page video">
 					<source src="${hugoStaticURL('builder/projects/gsu-video.mp4')}" type="video/mp4">
 					Your browser does not support the video tag.
 				</video>

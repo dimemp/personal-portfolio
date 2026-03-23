@@ -8,8 +8,11 @@
     <meta property="og:title" content="Dimitris Dimosiaris | Personal Portfolio and Website"/>
     <meta property="og:site_name" content="Dimitris Dimosiaris | Personal Portfolio and Website"/>
     <meta property="og:description" content="Dimitris Dimosiaris's personal portfolio and website."/>
-    <meta property="og:image" content="img/app_used/facebook_open_graph_dimosiaris.png" />
+    <meta property="og:image" content="{{ "open_graph_dimosiaris_image.png" | absURL }}"/>
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | Dimitris Dimosiaris{{ end }}</title>
+    <link rel="icon" href="{{ "favicon_white.svg" | relURL }}" type="image/svg+xml" sizes="any" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="{{ "dimosiaris_favicon.svg" | relURL }}" type="image/svg+xml" sizes="any" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="{{ "dimosiaris_favicon.svg" | relURL }}" type="image/svg+xml" sizes="any">
     <link rel="icon" href="{{ "favicon.png" | relURL }}" sizes="32x32">
     <link rel="icon" href="{{ "favicon_16.png" | relURL }}" sizes="16x16">
     <link rel="stylesheet" href="{{ "fonts/fontfamily/dm-sans.css" | relURL }}">

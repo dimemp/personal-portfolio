@@ -25,6 +25,9 @@ body.modal-open {
 .project-modal-dialog {
 	max-width: 100%;
 	margin: 0 auto;
+	/* vh fallback; dvh tracks visible viewport on mobile (toolbar safe) */
+	min-height: 100vh;
+	min-height: 100dvh;
 }
 
 .modal.fade .project-modal-dialog {
@@ -40,6 +43,8 @@ body.modal-open {
 	width: 100%;
 	height: 90vh;
 	max-height: 90vh;
+	height: 90dvh;
+	max-height: 90dvh;
 	background: var(--bs-body-bg);
 	border-radius: 16px 16px 0 0;
 	border: none;

@@ -24,8 +24,6 @@ body.modal-open {
 
 .project-modal-dialog {
 	max-width: 100%;
-	margin: 0 auto;
-	/* vh fallback; dvh tracks visible viewport on mobile (toolbar safe) */
 	min-height: 100vh;
 	min-height: 100dvh;
 }

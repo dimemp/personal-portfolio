@@ -12,8 +12,6 @@ $(function () {
 		modalEl = document.getElementById('projectModal'),
 		$modal = $(modalEl),
 		$modalContent = $('#js-project-modal-content'),
-		$prevBtn = $('#projectModalPrev'),
-		$nextBtn = $('#projectModalNext'),
 		projectModalContent = window.communitiesModalContent || window.webProjectsModalContent,
 		hasProjectModalContent = projectModalContent && projectModalContent.length && $modalContent.length,
 		bsModal = modalEl ? new bootstrap.Modal(modalEl) : null;
@@ -134,8 +132,14 @@ $(function () {
 		if (e.key === 'ArrowRight') nextProject();
 	});
 
-	$prevBtn.on('click', prevProject);
-	$nextBtn.on('click', nextProject);
+	$modal.on('click', '.project-modal-nav--prev', function (e) {
+		e.preventDefault();
+		prevProject();
+	});
+	$modal.on('click', '.project-modal-nav--next', function (e) {
+		e.preventDefault();
+		nextProject();
+	});
 
 	// --- Mobile swipe/drag-to-close ---
 	(function () {

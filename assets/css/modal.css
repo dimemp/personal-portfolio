@@ -88,18 +88,78 @@ body.modal-open {
 	color: var(--dd-heading);
 }
 
-.project-modal-nav-bar button {
+.project-modal-nav-bar__mobile button {
 	width: 95px;
+}
+
+/* Desktop: keyboard-hint nav (arrow keys + Escape) */
+
+.project-modal-nav-bar__desktop {
+	gap: 1.75rem;
+}
+
+.project-modal-kbd-nav {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: .3rem .8rem;
+	margin: 0;
+	border: 0;
+	background: transparent;
+	color: #757575;
+	line-height: 1.2;
+	cursor: pointer;
+	transition: background 0.15s, color 0.15s;
+}
+
+.project-modal-kbd-nav:hover {
+	background: rgba(0, 0, 0, 0.04);
+	color: #424242;
+}
+
+.project-modal-kbd-nav:focus-visible {
+	outline: 2px solid var(--bs-primary, #0d6efd);
+	outline-offset: 2px;
+}
+
+.project-modal-kbd-key {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 1rem;
+	height: 1.6rem;
+	padding: 0 0.4rem;
+	box-sizing: border-box;
+	background: #fff;
+	border: 1px solid #c8c8c8;
+	border-radius: 6px;
+	border-bottom-width: 2px;
+	border-bottom-color: #a8a8a8;
+	color: #757575;
+	font-size: 0.9rem;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
 }
 
 .project-modal-close {
 	top: 0.35rem;
-  	right: 0.5rem;
+  	right: 1.2rem;
 	width: 35px;
 	height: 35px;
+	padding: 0;
 	color: var(--dd-heading);
 	cursor: pointer;
 	transition: background 0.15s, border-color 0.15s;
+}
+
+.project-modal-close .bi {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+}
+
+.project-modal-close .bi::before {
+	vertical-align: 0;
 }
 
 .project-modal-close:hover {

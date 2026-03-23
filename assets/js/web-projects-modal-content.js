@@ -88,7 +88,7 @@ var brandsealContent = `
 				<p class="mb-0">Below you can see some more videos and images of the platform.</p>
 			</div>
 
-			<div class="w-100">
+			<div class="w-100 mb-5">
 
 				<div class="position-relative p-2">
 					<span class="tech-logos-box-rule"></span>
@@ -200,7 +200,7 @@ var founderhoodContent = `
 				<p class="mb-0">Below you can see some more videos of the platform.</p>
 			</div>
 
-			<div class="w-100">
+			<div class="w-100 mb-5">
 
 				<div class="position-relative p-2">
 					<span class="tech-logos-box-rule"></span>
@@ -258,7 +258,7 @@ var variousWebProjectsContent = `
 				<span class="tech-logos-box-rule"></span>
 				<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
-				<div class="d-flex justify-content-evenly flex-wrap gap-4 bg-white border rounded-3 p-4">
+				<div class="d-flex justify-content-lg-evenly flex-wrap gap-4 bg-white border rounded-3 p-4">
 					<div>
 						<h6 class="fs-09">20,000+</h6>
 						<p class="fs-09 mb-0">visitors</p>

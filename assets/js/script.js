@@ -72,6 +72,47 @@ $(function () {
 		});
 	});
 
+	// No row hover on touch: play project videos when the row is in view (muted + playsinline in markup).
+	(function () {
+		if (!window.matchMedia || !window.matchMedia('(hover: none)').matches) return;
+		var rows = document.querySelectorAll('.project-split-row');
+		if (!rows.length) return;
+
+		function playRowVideos(row) {
+			row.querySelectorAll('video').forEach(function (v) {
+				v.muted = true;
+				v.setAttribute('playsinline', '');
+				v.play().catch(function () {});
+			});
+		}
+
+		function pauseRowVideos(row) {
+			row.querySelectorAll('video').forEach(function (v) {
+				v.pause();
+				v.currentTime = 0;
+			});
+		}
+
+		if (!('IntersectionObserver' in window)) {
+			rows.forEach(playRowVideos);
+			return;
+		}
+
+		var observer = new IntersectionObserver(
+			function (entries) {
+				entries.forEach(function (entry) {
+					if (entry.isIntersecting) playRowVideos(entry.target);
+					else pauseRowVideos(entry.target);
+				});
+			},
+			{ root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.2 }
+		);
+
+		rows.forEach(function (row) {
+			observer.observe(row);
+		});
+	})();
+
 	function prevProject() {
 		if (!hasProjectModalContent) return;
 		var len = projectModalContent.length,

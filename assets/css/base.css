@@ -141,6 +141,10 @@ a:focus-visible {
 
 /* Buttons */
 
+.btn {
+	text-wrap: nowrap;
+}
+
 .btn-primary {
 	--bs-btn-color: #fff;
 	--bs-btn-bg: var(--dd-ink);

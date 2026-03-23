@@ -119,11 +119,11 @@
 /* Stats section */
 
 .stat-number {
-	font-size: clamp(4rem, 10vw, 6rem);
+	font-size: clamp(4rem, 10vw, 5rem);
 	font-weight: 600;
 	letter-spacing: -0.04em;
 	line-height: 1;
-	background: linear-gradient(to bottom, rgba(0, 132, 255, 0.2), rgba(0, 132, 255, 0.01));
+	background: linear-gradient(to bottom, rgba(0, 132, 255, 0.35), rgba(0, 132, 255, 0.01));
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -325,6 +325,24 @@
 
 .project-split-row:hover .btn-beam::before {
 	animation: beam-spin calc(var(--dd-beam-speed) * 2) infinite linear;
+}
+
+/* Touch / no-hover: full-color project logos; beam always on shimmer buttons (row hover is unavailable). */
+@media (hover: none) {
+
+	.project-split-row .project-logo {
+		filter: grayscale(0%);
+	}
+
+	.btn-shimmer-wrap .btn-beam {
+		opacity: 1;
+		animation: beam-slide var(--dd-beam-speed) ease-in-out infinite alternate;
+	}
+
+	.btn-shimmer-wrap .btn-beam::before {
+		animation: beam-spin calc(var(--dd-beam-speed) * 2) infinite linear;
+	}
+
 }
 
 .split-card:not(.is-dimmed) .btn-beam {

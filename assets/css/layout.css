@@ -1,5 +1,36 @@
 /* --- Split row, vertical divider, portrait, footer --- */
 
+/* Page column: footer absorbs space below main so .band side rails reach viewport bottom */
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+
+body > header {
+	flex-shrink: 0;
+}
+
+body > main {
+	flex: 0 0 auto;
+}
+
+body > footer {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+}
+
+footer > .band-rule.band {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+}
+
 /* Index page btns profile more */
 
 .btn-landing-profile-more {
@@ -201,6 +232,10 @@
 	.mobile-row-rule .mobile-dot--right {
 		right: 0;
 		transform: translate(50%, -50%);
+	}
+
+	.project-split-row .py-7 {
+		padding-bottom: 2.5rem!important;
 	}
 
 }

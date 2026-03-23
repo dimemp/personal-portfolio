@@ -354,13 +354,3 @@ window.webProjectsModalContent = [
 	founderhoodContent,
 	variousWebProjectsContent
 ];
-
-// Paths passed to hugoStaticURL(); warmed after page load (see script.js) so modal <video> hits cache.
-window.modalVideoPreloadPaths = [
-	'builder/projects/brandseal-video.mp4',
-	'builder/projects/brandseal-platform-video-1.mp4',
-	'builder/projects/founderhood-video.mp4',
-	'builder/projects/founderhood-platform-video-1.mp4',
-	'builder/projects/founderhood-platform-video-2.mp4',
-	'builder/projects/gsu-video.mp4'
-];

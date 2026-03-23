@@ -25,6 +25,26 @@ $(function () {
 		}
 	}
 
+	function pauseProjectRowVideos() {
+		document.querySelectorAll('.project-split-row video').forEach(function (v) {
+			v.pause();
+		});
+	}
+
+	function resumeVisibleProjectRowVideos() {
+		var vh = window.innerHeight || document.documentElement.clientHeight || 0;
+		document.querySelectorAll('.project-split-row').forEach(function (row) {
+			var r = row.getBoundingClientRect();
+			if (r.width <= 0 || r.height <= 0 || r.bottom <= 0 || r.top >= vh)
+				return;
+			row.querySelectorAll('video').forEach(function (v) {
+				v.muted = true;
+				v.setAttribute('playsinline', '');
+				v.play().catch(function () {});
+			});
+		});
+	}
+
 	function tryPlayModalVideo(v) {
 		v.muted = true;
 		v.defaultMuted = true;
@@ -93,8 +113,6 @@ $(function () {
 				entries.forEach(function (entry) {
 					if (entry.isIntersecting)
 						tryPlayModalVideo(entry.target);
-					else
-						entry.target.pause();
 				});
 			},
 			{ root: scrollRoot, rootMargin: '40px 0px', threshold: 0.01 }
@@ -119,8 +137,22 @@ $(function () {
 		});
 	}
 
+	function teardownModalContentVideos() {
+		$modalContent.find('video').each(function () {
+			var v = this;
+			v.pause();
+			v.querySelectorAll('source').forEach(function (s) {
+				s.removeAttribute('src');
+			});
+			try {
+				v.load();
+			} catch (e) {}
+		});
+	}
+
 	function renderProject(index) {
 		disconnectModalVideoObserver();
+		teardownModalContentVideos();
 		currentProjectIndex = index;
 		if (hasProjectModalContent) {
 			var content = projectModalContent[index];
@@ -133,12 +165,14 @@ $(function () {
 	}
 
 	function openModal(index) {
+		pauseProjectRowVideos();
 		renderProject(index);
 		if (bsModal) bsModal.show();
 	}
 
 	if (modalEl) {
 		modalEl.addEventListener('shown.bs.modal', function () {
+			pauseProjectRowVideos();
 			$('.project-modal-content').scrollTop(0);
 			scheduleInitModalVideos();
 		});
@@ -148,7 +182,14 @@ $(function () {
 			if (inner)
 				inner.querySelectorAll('video').forEach(function (v) {
 					v.pause();
+					v.querySelectorAll('source').forEach(function (s) {
+						s.removeAttribute('src');
+					});
+					try {
+						v.load();
+					} catch (e) {}
 				});
+			resumeVisibleProjectRowVideos();
 		});
 	}
 
@@ -425,43 +466,3 @@ $(function () {
 	});
 
 });
-
-// After full page load, prefetch modal MP4s (builder bundle sets window.modalVideoPreloadPaths).
-(function () {
-	function startModalVideoPreload() {
-		var paths = window.modalVideoPreloadPaths;
-		if (!paths || !paths.length || typeof window.hugoStaticURL !== 'function' || !document.body)
-			return;
-
-		var holder = document.createElement('div');
-		holder.setAttribute('aria-hidden', 'true');
-		holder.style.cssText = 'position:absolute;width:0;height:0;margin:0;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0;white-space:nowrap;';
-
-		paths.forEach(function (path) {
-			var v = document.createElement('video');
-			v.preload = 'auto';
-			v.muted = true;
-			v.defaultMuted = true;
-			v.setAttribute('playsinline', '');
-			v.setAttribute('aria-hidden', 'true');
-			var s = document.createElement('source');
-			s.src = window.hugoStaticURL(path);
-			s.type = 'video/mp4';
-			v.appendChild(s);
-			holder.appendChild(v);
-			v.load();
-		});
-
-		document.body.appendChild(holder);
-	}
-
-	function scheduleModalVideoPreload() {
-		if (window.requestIdleCallback)
-			window.requestIdleCallback(function () { startModalVideoPreload(); }, { timeout: 8000 });
-		else
-			setTimeout(startModalVideoPreload, 1);
-	}
-
-	if (window.addEventListener)
-		window.addEventListener('load', scheduleModalVideoPreload);
-})();

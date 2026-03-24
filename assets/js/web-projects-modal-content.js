@@ -37,25 +37,25 @@ var brandsealContent = `
 				<div>
 					<h6 class="fs-09">Tech & tools used</h6>
 					<div class="tech-logos-grid tech-logos-grid--8-cols">
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="PHP"><img src="${hugoStaticURL('builder/tech_logos/php-logo.svg')}" alt="PHP"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Laravel"><img src="${hugoStaticURL('builder/tech_logos/laravel-logo.svg')}" alt="Laravel"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="MySQL"><img src="${hugoStaticURL('builder/tech_logos/mysql-logo.svg')}" alt="MySQL"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="MariaDB"><img src="${hugoStaticURL('builder/tech_logos/mariadb-logo.svg')}" alt="MariaDB"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Bootstrap"><img src="${hugoStaticURL('builder/tech_logos/bootstrap-logo.svg')}" alt="Bootstrap"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="HTML5"><img src="${hugoStaticURL('builder/tech_logos/html5-logo.svg')}" alt="HTML5"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="CSS3"><img src="${hugoStaticURL('builder/tech_logos/css3-logo.svg')}" alt="CSS3"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="JavaScript"><img src="${hugoStaticURL('builder/tech_logos/javascript-logo.svg')}" alt="JavaScript"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="jQuery"><img src="${hugoStaticURL('builder/tech_logos/jquery-logo.svg')}" alt="jQuery"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Git"><img src="${hugoStaticURL('builder/tech_logos/git-logo.svg')}" alt="Git"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="GitHub"><img src="${hugoStaticURL('builder/tech_logos/github-logo.svg')}" alt="GitHub"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="PHP" title="PHP"><img src="${hugoStaticURL('builder/tech_logos/php-logo.svg')}" alt="PHP"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Laravel" title="Laravel"><img src="${hugoStaticURL('builder/tech_logos/laravel-logo.svg')}" alt="Laravel"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="MySQL" title="MySQL"><img src="${hugoStaticURL('builder/tech_logos/mysql-logo.svg')}" alt="MySQL"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="MariaDB" title="MariaDB"><img src="${hugoStaticURL('builder/tech_logos/mariadb-logo.svg')}" alt="MariaDB"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Bootstrap" title="Bootstrap"><img src="${hugoStaticURL('builder/tech_logos/bootstrap-logo.svg')}" alt="Bootstrap"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="HTML5" title="HTML5"><img src="${hugoStaticURL('builder/tech_logos/html5-logo.svg')}" alt="HTML5"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="CSS3" title="CSS3"><img src="${hugoStaticURL('builder/tech_logos/css3-logo.svg')}" alt="CSS3"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="JavaScript" title="JavaScript"><img src="${hugoStaticURL('builder/tech_logos/javascript-logo.svg')}" alt="JavaScript"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="jQuery" title="jQuery"><img src="${hugoStaticURL('builder/tech_logos/jquery-logo.svg')}" alt="jQuery"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Git" title="Git"><img src="${hugoStaticURL('builder/tech_logos/git-logo.svg')}" alt="Git"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="GitHub" title="GitHub"><img src="${hugoStaticURL('builder/tech_logos/github-logo.svg')}" alt="GitHub"></div>
 					</div>
 				</div>
 				<div>
 					<h6 class="fs-09">Integrations</h6>
 					<div class="col-12 col-lg-8 tech-logos-grid tech-logos-grid--3-cols">
-						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Google Workspace"><img src="${hugoStaticURL('builder/tech_logos/google-workspace-full-logo.svg')}" alt="Google Workspace"></div>
-						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Notion"><img src="${hugoStaticURL('builder/tech_logos/notion-full-logo.svg')}" alt="Notion"></div>
-						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Slack"><img src="${hugoStaticURL('builder/tech_logos/slack-full-logo.svg')}" alt="Slack"></div>
+						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Google Workspace" title="Google Workspace"><img src="${hugoStaticURL('builder/tech_logos/google-workspace-full-logo.svg')}" alt="Google Workspace"></div>
+						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Notion" title="Notion"><img src="${hugoStaticURL('builder/tech_logos/notion-full-logo.svg')}" alt="Notion"></div>
+						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Slack" title="Slack"><img src="${hugoStaticURL('builder/tech_logos/slack-full-logo.svg')}" alt="Slack"></div>
 					</div>
 				</div>
 				<div>
@@ -142,30 +142,30 @@ var founderhoodContent = `
 				<div>
 					<h6 class="fs-09">Tech & tools used</h6>
 					<div class="tech-logos-grid tech-logos-grid--8-cols">
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="PHP"><img src="${hugoStaticURL('builder/tech_logos/php-logo.svg')}" alt="PHP"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Laravel"><img src="${hugoStaticURL('builder/tech_logos/laravel-logo.svg')}" alt="Laravel"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="MySQL"><img src="${hugoStaticURL('builder/tech_logos/mysql-logo.svg')}" alt="MySQL"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Bootstrap"><img src="${hugoStaticURL('builder/tech_logos/bootstrap-logo.svg')}" alt="Bootstrap"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="JavaScript"><img src="${hugoStaticURL('builder/tech_logos/javascript-logo.svg')}" alt="JavaScript"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="jQuery"><img src="${hugoStaticURL('builder/tech_logos/jquery-logo.svg')}" alt="jQuery"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Git"><img src="${hugoStaticURL('builder/tech_logos/git-logo.svg')}" alt="Git"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="GitHub"><img src="${hugoStaticURL('builder/tech_logos/github-logo.svg')}" alt="GitHub"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="MariaDB"><img src="${hugoStaticURL('builder/tech_logos/mariadb-logo.svg')}" alt="MariaDB"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="HTML5"><img src="${hugoStaticURL('builder/tech_logos/html5-logo.svg')}" alt="HTML5"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="CSS3"><img src="${hugoStaticURL('builder/tech_logos/css3-logo.svg')}" alt="CSS3"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="PHP" title="PHP"><img src="${hugoStaticURL('builder/tech_logos/php-logo.svg')}" alt="PHP"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Laravel" title="Laravel"><img src="${hugoStaticURL('builder/tech_logos/laravel-logo.svg')}" alt="Laravel"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="MySQL" title="MySQL"><img src="${hugoStaticURL('builder/tech_logos/mysql-logo.svg')}" alt="MySQL"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Bootstrap" title="Bootstrap"><img src="${hugoStaticURL('builder/tech_logos/bootstrap-logo.svg')}" alt="Bootstrap"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="JavaScript" title="JavaScript"><img src="${hugoStaticURL('builder/tech_logos/javascript-logo.svg')}" alt="JavaScript"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="jQuery" title="jQuery"><img src="${hugoStaticURL('builder/tech_logos/jquery-logo.svg')}" alt="jQuery"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Git" title="Git"><img src="${hugoStaticURL('builder/tech_logos/git-logo.svg')}" alt="Git"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="GitHub" title="GitHub"><img src="${hugoStaticURL('builder/tech_logos/github-logo.svg')}" alt="GitHub"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="MariaDB" title="MariaDB"><img src="${hugoStaticURL('builder/tech_logos/mariadb-logo.svg')}" alt="MariaDB"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="HTML5" title="HTML5"><img src="${hugoStaticURL('builder/tech_logos/html5-logo.svg')}" alt="HTML5"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="CSS3" title="CSS3"><img src="${hugoStaticURL('builder/tech_logos/css3-logo.svg')}" alt="CSS3"></div>
 					</div>
 				</div>
 				<div>
 					<h6 class="fs-09">Integrations</h6>
 					<div class="tech-logos-grid tech-logos-grid--8-cols">
-						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Slack"><img class="w-75" src="${hugoStaticURL('builder/tech_logos/slack-full-logo.svg')}" alt="Slack"></div>
-						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Outlook Calendar"><img src="${hugoStaticURL('builder/tech_logos/outlook-calendar-logo.svg')}" alt="Outlook Calendar"></div>
-						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Google Calendar"><img src="${hugoStaticURL('builder/tech_logos/google-calendar-logo.svg')}" alt="Google Calendar"></div>
-						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Zapier"><img src="${hugoStaticURL('builder/tech_logos/zapier-logo.svg')}" alt="Zapier"></div>
-						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="SendGrid"><img class="w-75" src="${hugoStaticURL('builder/tech_logos/sendgrid-logo.svg')}" alt="SendGrid"></div>
-						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Zoom"><img class="w-75" src="${hugoStaticURL('builder/tech_logos/zoom-logo.svg')}" alt="Zoom"></div>
-						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Daily"><img class="w-75" src="${hugoStaticURL('builder/tech_logos/daily-logo.svg')}" alt="Daily"></div>
-						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-name="Pusher"><img class="w-75" src="${hugoStaticURL('builder/tech_logos/pusher-logo.svg')}" alt="Pusher"></div>
+						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Slack" title="Slack"><img class="w-75" src="${hugoStaticURL('builder/tech_logos/slack-full-logo.svg')}" alt="Slack"></div>
+						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Outlook Calendar" title="Outlook Calendar"><img src="${hugoStaticURL('builder/tech_logos/outlook-calendar-logo.svg')}" alt="Outlook Calendar"></div>
+						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Google Calendar" title="Google Calendar"><img src="${hugoStaticURL('builder/tech_logos/google-calendar-logo.svg')}" alt="Google Calendar"></div>
+						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Zapier" title="Zapier"><img src="${hugoStaticURL('builder/tech_logos/zapier-logo.svg')}" alt="Zapier"></div>
+						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="SendGrid" title="SendGrid"><img class="w-75" src="${hugoStaticURL('builder/tech_logos/sendgrid-logo.svg')}" alt="SendGrid"></div>
+						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Zoom" title="Zoom"><img class="w-75" src="${hugoStaticURL('builder/tech_logos/zoom-logo.svg')}" alt="Zoom"></div>
+						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Daily" title="Daily"><img class="w-75" src="${hugoStaticURL('builder/tech_logos/daily-logo.svg')}" alt="Daily"></div>
+						<div class="tech-logo-item tech-logo-item--wide d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Pusher" title="Pusher"><img class="w-75" src="${hugoStaticURL('builder/tech_logos/pusher-logo.svg')}" alt="Pusher"></div>
 					</div>
 				</div>
 				<div>
@@ -324,10 +324,10 @@ var variousWebProjectsContent = `
 				<div class="bg-white border rounded-3 p-4">
 					<h6 class="fs-09">Tech & tools used</h6>
 					<div class="tech-logos-grid tech-logos-grid--8-cols">
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="Django"><img src="${hugoStaticURL('builder/tech_logos/django-logo.svg')}" alt="Django"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="JavaScript"><img src="${hugoStaticURL('builder/tech_logos/javascript-logo.svg')}" alt="JavaScript"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="jQuery"><img src="${hugoStaticURL('builder/tech_logos/jquery-logo.svg')}" alt="jQuery"></div>
-						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-name="PostgreSQL"><img src="${hugoStaticURL('builder/tech_logos/postgresql-logo.svg')}" alt="PostgreSQL"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="Django" title="Django"><img src="${hugoStaticURL('builder/tech_logos/django-logo.svg')}" alt="Django"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="JavaScript" title="JavaScript"><img src="${hugoStaticURL('builder/tech_logos/javascript-logo.svg')}" alt="JavaScript"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="jQuery" title="jQuery"><img src="${hugoStaticURL('builder/tech_logos/jquery-logo.svg')}" alt="jQuery"></div>
+						<div class="tech-logo-item d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-name="PostgreSQL" title="PostgreSQL"><img src="${hugoStaticURL('builder/tech_logos/postgresql-logo.svg')}" alt="PostgreSQL"></div>
 					</div>
 				</div>
 			</div>

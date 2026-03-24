@@ -154,12 +154,22 @@ $(function () {
 		disconnectModalVideoObserver();
 		teardownModalContentVideos();
 		currentProjectIndex = index;
+		var innerModal = document.getElementById('js-project-modal-content');
+		if (innerModal && window.bootstrap && bootstrap.Tooltip)
+			innerModal.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(function (el) {
+				var t = bootstrap.Tooltip.getInstance(el);
+				if (t) t.dispose();
+			});
 		if (hasProjectModalContent) {
 			var content = projectModalContent[index];
 			if (content)
 				$modalContent.html(content);
 		}
 		$('.project-modal-content').scrollTop(0);
+		if (innerModal && window.bootstrap && bootstrap.Tooltip)
+			innerModal.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(function (el) {
+				bootstrap.Tooltip.getOrCreateInstance(el, { container: 'body' });
+			});
 		if ($modal.hasClass('show'))
 			scheduleInitModalVideos();
 	}
@@ -400,6 +410,11 @@ $(function () {
 			$label.text(defaultText);
 		});
 	})();
+
+	if (window.bootstrap && bootstrap.Tooltip)
+		document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(function (el) {
+			bootstrap.Tooltip.getOrCreateInstance(el, { container: 'body' });
+		});
 
 	// --- Home page: Product vs Community toggle ---
 	function isLargeScreen() {

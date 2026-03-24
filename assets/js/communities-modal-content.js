@@ -21,6 +21,7 @@ const variousCommunitiesContent = `
 				<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<img class="w-100 img-fluid rounded-3" src="${hugoStaticURL('communities/sigma_squared_group.png')}" alt="Sigma Squared team">
+				<p class="fs-09 text-muted px-1 mt-3 mb-2">Attendants of the exclusive members-only Sigma Squared London Summit gathering.</p>
 			</div>
 
 			<div class="position-relative p-2">
@@ -85,6 +86,7 @@ const variousCommunitiesContent = `
 				<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<img class="w-100 img-fluid rounded-3" src="${hugoStaticURL('communities/french_tech_athens_group_image.webp')}" alt="La French Tech Athens team">
+				<p class="fs-09 text-muted px-1 mt-3 mb-2">Founding Board members of La French Tech during an event introducing the organization locally.</p>
 			</div>
 
 			<div class="position-relative p-2">
@@ -142,6 +144,7 @@ const variousCommunitiesContent = `
 				<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<img class="w-100 img-fluid rounded-3" src="${hugoStaticURL('communities/startup_universe_impact.png')}" alt="Startup Universe impact image">
+				<p class="fs-09 text-muted px-1 mt-3 mb-2">Global impact of the Startup Universe program co-initiated after four years of operation.</p>
 			</div>
 
 			<div class="position-relative p-2">
@@ -175,7 +178,7 @@ const variousCommunitiesContent = `
 				<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<div class="col-12 col-xl-8 px-3 py-7 mx-auto">
 					<h6 class="mb-3">Description</h6>
-					<p class="mb-0">I helped organize this digital program to support early-stage founders globally, reaching more than 2,500 participants across 40+ countries. The project was built to give founders in emerging or immature ecosystems a structured path to find the mentors and investors they need to scale their companies.</p>
+					<p class="mb-0">I helped organize this digital program to support early-stage founders globally, reaching more than 2,000 participants across 30+ countries. The project was built to give founders in emerging or immature ecosystems a structured path to find the mentors and investors they need to scale their companies.</p>
 				</div>
 			</div>
 
@@ -199,6 +202,7 @@ const variousCommunitiesContent = `
 				<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<img class="w-100 img-fluid rounded-3" src="${hugoStaticURL('communities/greektech_group.jpg')}" alt="GreekTech team">
+				<p class="fs-09 text-muted px-1 mt-3 mb-2">The GreekTech and Founderhood teams, along with some friends, gathered for a meetup in Athens.</p>
 			</div>
 
 			<div class="position-relative p-2">
@@ -258,6 +262,7 @@ const mindspaceContent = `
 			<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 			<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 			<img class="w-100 img-fluid rounded-3" src="${hugoStaticURL('communities/mindspace_group_image.webp')}" alt="Mindspace team">
+			<p class="fs-09 text-muted px-1 mt-3 mb-2">From Mindspace Challenge finals. Challenge was a Panhellenic startup idea competition organized during my tenure as Chairman of the organization.</p>
 		</div>
 
 		<div class="position-relative p-2">
@@ -325,6 +330,7 @@ const thinkbizContent = `
 			<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 			<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 			<img class="w-100 img-fluid rounded-3" src="${hugoStaticURL('communities/thinkbiz_group_image.jpg')}" alt="ThinkBiz team">
+			<p class="fs-09 text-muted px-1 mt-3 mb-2">Members of the incredible Thinkbiz team. Thinkbiz is the first entrepreneurship club at a Greek university.</p>
 		</div>
 
 		<div class="position-relative p-2">

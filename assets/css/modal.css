@@ -13,7 +13,7 @@ body.modal-open {
 }
 
 .modal-backdrop {
-	background: rgba(10, 10, 10, 0.45);
+	background: var(--dd-backdrop-scrim);
 	backdrop-filter: blur(4px);
 	-webkit-backdrop-filter: blur(4px);
 }
@@ -46,7 +46,7 @@ body.modal-open {
 	background: var(--bs-body-bg);
 	border-radius: 16px 16px 0 0;
 	border: none;
-	box-shadow: 0 -4px 40px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 -4px 40px var(--dd-black-a15);
 }
 
 @media (max-width: 991.98px) {
@@ -109,15 +109,16 @@ body.modal-open {
 	line-height: 1.2;
 	cursor: pointer;
 	transition: background 0.15s, color 0.15s;
+	color: var(--bs-secondary-color);
 }
 
 .project-modal-kbd-nav:hover {
-	background: rgba(0, 0, 0, 0.04);
-	color: #424242;
+	background: var(--dd-black-a04);
+	color: var(--dd-text-hover);
 }
 
 .project-modal-kbd-nav:focus-visible {
-	outline: 2px solid var(--bs-primary, #0d6efd);
+	outline: 2px solid var(--bs-primary);
 	outline-offset: 2px;
 }
 
@@ -135,7 +136,7 @@ body.modal-open {
 	border-bottom-width: 2px;
 	border-bottom-color: var(--bs-border-color);
 	font-size: 0.9rem;
-	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+	box-shadow: 0 1px 0 var(--dd-black-a04);
 }
 
 .project-modal-close {

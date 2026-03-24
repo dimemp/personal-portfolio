@@ -25,6 +25,7 @@ var brandsealContent = `
 				<source src="${hugoStaticURL('builder/projects/brandseal-video.mp4')}" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
+			<p class="fs-09 text-muted px-1 mt-3 mb-2">Brandseal landing page scroll showcasing the core product features and user interface.</p>
 		</div>
 
 		<div class="position-relative p-2">
@@ -99,6 +100,19 @@ var brandsealContent = `
 						<source src="${hugoStaticURL('builder/projects/brandseal-platform-video-1.mp4')}" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
+					<p class="fs-09 text-muted px-1 mt-3 mb-2">In Brandseal, employees can be organized into groups or departments to assign different email signatures for each.</p>
+				</div>
+
+				<div class="position-relative p-2">
+					<span class="tech-logos-box-rule"></span>
+					<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
+					<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
+
+					<video class="w-100 object-fit-cover rounded-3" preload="auto" muted autoplay playsinline loop aria-label="Brandseal platform video 1">
+						<source src="${hugoStaticURL('builder/projects/brandseal-platform-video-2.mp4')}" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					<p class="fs-09 text-muted px-1 mt-3 mb-2">Professional email signature templates that provide a wide range of options for creating customized brand identities.</p>
 				</div>
 
 			</div>
@@ -130,6 +144,7 @@ var founderhoodContent = `
 				<source src="${hugoStaticURL('builder/projects/founderhood-video.mp4')}" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
+			<p class="fs-09 text-muted px-1 mt-3 mb-2">Founderhood landing page scroll highlighting the platform’s key functionalities and product flow.</p>
 		</div>
 
 		<div class="position-relative p-2">
@@ -211,6 +226,7 @@ var founderhoodContent = `
 						<source src="${hugoStaticURL('builder/projects/founderhood-platform-video-1.mp4')}" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
+					<p class="fs-09 text-muted px-1 mt-3 mb-2">Advanced analytics for startup program organizers including detailed tracking for email open rates.</p>
 				</div>
 
 				<div class="position-relative p-2">
@@ -221,6 +237,7 @@ var founderhoodContent = `
 						<source src="${hugoStaticURL('builder/projects/founderhood-platform-video-2.mp4')}" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
+					<p class="fs-09 text-muted px-1 mt-3 mb-2">Startup program organizers can build and customize dedicated landing pages directly within Founderhood.</p>
 				</div>
 
 			</div>
@@ -252,6 +269,7 @@ var variousWebProjectsContent = `
 					<source src="${hugoStaticURL('builder/projects/gsu-video.mp4')}" type="video/mp4">
 					Your browser does not support the video tag.
 				</video>
+				<p class="fs-09 text-muted px-1 mt-3 mb-2">Greek Startup Universe landing page that attracted over 600 founders and numerous industry experts.</p>
 			</div>
 
 			<div class="position-relative p-2">
@@ -306,16 +324,16 @@ var variousWebProjectsContent = `
 				<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<img class="w-100 img-fluid rounded-3" src="${hugoStaticURL('builder/projects/partybuzz-user-profile.PNG')}" alt="PartyBuzz user profile screenshot">
+				<p class="fs-09 text-muted px-1 mt-3 mb-2">Partybuzz user profile displaying limited invitations used to curate an exclusive initial community.</p>
 			</div>
-			<p class="figure-caption px-2 mt-2 mb-5">User's profile page with limited invitations. Whole platform was invitation-only to curate the initial community.</p>
 
 			<div class="position-relative p-2">
 				<span class="tech-logos-box-rule"></span>
 				<span class="tech-logos-box-dot tech-logos-box-dot--start d-block position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<span class="tech-logos-box-dot tech-logos-box-dot--end d-block position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
 				<img class="w-100 img-fluid rounded-3" src="${hugoStaticURL('builder/projects/partybuzz-contibutions-invitation-modals.png')}" alt="PartyBuzz invitation modals screenshot">
+				<p class="fs-09 text-muted px-1 mt-3 mb-2">Group invitations with friends tagging and integrated party contribution request workflows.</p>
 			</div>
-			<p class="figure-caption px-2 mt-2 mb-5">Group "asking" invitation for a party & contributions requests.</p>
 
 			<div class="position-relative p-2">
 				<span class="tech-logos-box-rule"></span>

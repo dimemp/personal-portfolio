@@ -119,6 +119,10 @@ p, .body-text {
 	font-size: 0.7rem;
 }
 
+.lh-14 {
+	line-height: 1.4!important;
+}
+
 a {
 	color: var(--dd-body);
 	text-decoration: underline;
@@ -244,6 +248,7 @@ a:focus-visible {
     }
 
 	.navbar .nav-link {
+		font-size: 0.9rem;
 		border-radius: var(--bs-border-radius-lg);
 	}
 

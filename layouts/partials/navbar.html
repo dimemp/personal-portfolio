@@ -37,13 +37,13 @@
 						<a class="nav-link px-3{{ if eq $active "home" }} active{{ end }}"{{ if eq $active "home" }} aria-current="page"{{ end }} href="{{ site.Home.RelPermalink }}">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link px-3{{ if eq $active "builder" }} active{{ end }}"{{ if eq $active "builder" }} aria-current="page"{{ end }} href="{{ ref . `builder.md` }}">Web projects</a>
+						<a class="nav-link px-3{{ if eq $active "builder" }} active{{ end }}"{{ if eq $active "builder" }} aria-current="page"{{ end }} href="{{ relref . `builder.md` }}">Web projects</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link px-3{{ if eq $active "communities" }} active{{ end }}"{{ if eq $active "communities" }} aria-current="page"{{ end }} href="{{ ref . `communities.md` }}">Communities</a>
+						<a class="nav-link px-3{{ if eq $active "communities" }} active{{ end }}"{{ if eq $active "communities" }} aria-current="page"{{ end }} href="{{ relref . `communities.md` }}">Communities</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link px-3{{ if eq $active "about" }} active{{ end }}"{{ if eq $active "about" }} aria-current="page"{{ end }} href="{{ ref . `about.md` }}">About</a>
+						<a class="nav-link px-3{{ if eq $active "about" }} active{{ end }}"{{ if eq $active "about" }} aria-current="page"{{ end }} href="{{ relref . `about.md` }}">About</a>
 					</li>
 				</ul>
 				<div class="pb-3 pb-lg-0 mt-4 mt-lg-0 mx-3 mx-lg-0">

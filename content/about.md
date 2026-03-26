@@ -1,5 +1,5 @@
 ---
 title: About
-description: How a builder’s mindset led from Mechanical Engineering at NTUA to ThinkBiz, Mindspace, Greek Startup Universe, seven years leading Founderhood as CTO/CPO, and Wispit today.
+description: "Dimitris Dimosiaris: The story of a builder. From engineering physical infrastructure to crafting digital products and scaling startup ecosystems."
 type: about
 ---

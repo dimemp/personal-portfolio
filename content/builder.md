@@ -1,5 +1,5 @@
 ---
 title: Web projects
-description: Full-stack delivery and product ownership—Laravel, JavaScript, DevOps, MySQL, and visual identity—taking ideas from prototype to live, branded software.
+description: Full stack product delivery from prototype to live software. Expert in Laravel, and JavaScript, taking ideas from concept to branded digital products.
 type: builder
 ---

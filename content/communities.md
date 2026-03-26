@@ -1,5 +1,5 @@
 ---
 title: Communities
-description: Ten years designing programs for founders and students across Greece and beyond—French Tech Athens, Sigma Squared, Startup Universe, GreekTech, Mindspace, ThinkBiz, and more.
+description: Over ten years of designing programs for founders and students, demonstrating leadership and impact within Greek and global operating communities.
 type: communities
 ---

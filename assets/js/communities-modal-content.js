@@ -341,9 +341,10 @@ const thinkbizContent = `
 				<div>
 					<h6 class="fs-09">Roles</h6>
 					<ul class="fs-09 ps-3 mb-0">
-						<li>"Knowledge Base" project team member (2012-2013)</li>
-						<li>"Day in a Startup" Project Team Lead (2013-2014)</li>
+						<li>Founding member (2012-2015)</li>
 						<li>HR member (2013-2015)</li>
+						<li>"Day in a Startup" Project Team Lead (2013-2014)</li>
+						<li>"Knowledge Base" project team member (2012-2013)</li>			
 					</ul>
 				</div>
 				<div>

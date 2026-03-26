@@ -4,3 +4,20 @@ title = 'Dimitris Dimosiaris | Personal Portfolio and Website'
 
 # No tag/category pages; avoids "no layout for taxonomy" warnings.
 disableKinds = ['taxonomy', 'term']
+
+enableRobotsTXT = true
+
+[params]
+description = "Dimitris Dimosiaris — Personal Portfolio & Website"
+author = 'Dimitris Dimosiaris'
+job_title = 'Product builder, community leader, and engineer'
+og_image = 'open_graph_dimosiaris_image.png'
+og_image_width = 1200
+og_image_height = 630
+og_image_alt = 'Dimitris Dimosiaris — Personal Portfolio & Website image'
+same_as = [
+  'https://www.linkedin.com/in/dimitrisdimosiaris',
+  'https://github.com/dimemp',
+  'https://x.com/DimiDimos',
+  'https://medium.com/@DimitrisDimosiaris',
+]

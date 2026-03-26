@@ -1,0 +1,5 @@
+{{- $sameAs := .Site.Params.same_as | default slice -}}
+{{- $person := dict "@context" "https://schema.org" "@type" "Person" "name" (.Site.Params.author | default .Site.Title) "url" (.Site.BaseURL | string) "sameAs" $sameAs -}}
+{{- with .Site.Params.job_title }}{{ $person = merge $person (dict "jobTitle" .) }}{{ end -}}
+{{- with .Site.Params.description }}{{ $person = merge $person (dict "description" .) }}{{ end -}}
+<script type="application/ld+json">{{- $person | jsonify | safeJS -}}</script>

@@ -1,15 +1,30 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dimitris Dimosiaris's personal portfolio and website.">
-    <meta name="author" content="Dimitris Dimosiaris">
-    <meta property="og:url" content="https://dimosiaris.com/"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Dimitris Dimosiaris | Personal Portfolio and Website"/>
-    <meta property="og:site_name" content="Dimitris Dimosiaris | Personal Portfolio and Website"/>
-    <meta property="og:description" content="Dimitris Dimosiaris's personal portfolio and website."/>
-    <meta property="og:image" content="{{ "open_graph_dimosiaris_image.png" | absURL }}"/>
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | Dimitris Dimosiaris{{ end }}</title>
+    {{- $pageDesc := .Description | default .Site.Params.description -}}
+    {{- $seoTitle := cond .IsHome .Site.Title (printf "%s | Dimitris Dimosiaris" .Title) -}}
+    {{- $ogImage := .Params.og_image | default .Site.Params.og_image | default "open_graph_dimosiaris_image.png" -}}
+    {{- $ogImageAbs := $ogImage | absURL -}}
+    {{- $ogW := .Params.og_image_width | default .Site.Params.og_image_width -}}
+    {{- $ogH := .Params.og_image_height | default .Site.Params.og_image_height -}}
+    {{- $ogAlt := .Params.og_image_alt | default .Site.Params.og_image_alt | default $seoTitle -}}
+    <meta name="description" content="{{ $pageDesc }}">
+    <meta name="author" content="{{ .Site.Params.author | default `Dimitris Dimosiaris` }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ $seoTitle }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:description" content="{{ $pageDesc }}">
+    <meta property="og:image" content="{{ $ogImageAbs }}">
+    {{- with $ogW }}<meta property="og:image:width" content="{{ . }}">{{ end -}}
+    {{- with $ogH }}<meta property="og:image:height" content="{{ . }}">{{ end -}}
+    <meta property="og:image:alt" content="{{ $ogAlt }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $seoTitle }}">
+    <meta name="twitter:description" content="{{ $pageDesc }}">
+    <meta name="twitter:image" content="{{ $ogImageAbs }}">
+    <title>{{ $seoTitle }}</title>
     <link rel="icon" href="{{ "favicon_white.svg" | relURL }}" type="image/svg+xml" sizes="any" media="(prefers-color-scheme: dark)">
     <link rel="icon" href="{{ "dimosiaris_favicon.svg" | relURL }}" type="image/svg+xml" sizes="any" media="(prefers-color-scheme: light)">
     <link rel="icon" href="{{ "dimosiaris_favicon.svg" | relURL }}" type="image/svg+xml" sizes="any">
@@ -28,5 +43,6 @@
         {{- $bundle := . | resources.Concat "css/bundle.css" | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" crossorigin="anonymous" media="screen">
     {{- end }}
+    {{ partial "seo-person-jsonld.html" . }}
     {{ partial "web-analytics.html" . }}
 </head>

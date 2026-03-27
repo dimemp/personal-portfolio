@@ -13,7 +13,7 @@ const variousCommunitiesContent = `
 
 			<div class="px-3 px-lg-4 my-5">
 				<h6 class="fs-09 text-muted">Mar 2019 - Present</h6>
-				<h5 class="mb-4">Fellow - Sigma Squared</h5>
+				<h5 class="mb-4">Fellow, ex-Greek chapter executive - Sigma Squared</h5>
 			</div>
 
 			<div class="w-100 position-relative p-2">

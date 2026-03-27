@@ -1,0 +1,11 @@
+{{- /* Outer band: side rules + top dots. Expects dict key "content" (HTML). */ -}}
+<div class="project-modal-band band band-rule position-relative overflow-visible">
+
+		<span class="rule-left"></span>
+		<span class="rule-center"></span>
+		<span class="rule-right"></span>
+		<span class="band-dot band-dot--start position-absolute top-0 start-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
+		<span class="band-dot band-dot--end position-absolute top-0 end-0 z-2"><span class="dot-ring d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"><span class="dot-fill"></span></span></span>
+		{{ .content | safeHTML }}
+		
+</div>

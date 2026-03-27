@@ -1,0 +1,16 @@
+{{- /*
+	Modal HTML for communities page: inert <template> nodes in the document for crawlers.
+	project-modal.js collects every template.js-project-modal-slide (document order) into window[ data-modal-content-key ].
+	Order must match data-project="0", "1", … on each .project-split-row.
+*/ -}}
+<div id="project-modal-templates" class="js-project-modal-templates" hidden aria-hidden="true" data-modal-content-key="communitiesModalContent">
+	<template class="js-project-modal-slide" id="modal-community-0">
+		{{- partial "modal/communities/slide-0-various.html" . -}}
+	</template>
+	<template class="js-project-modal-slide" id="modal-community-1">
+		{{- partial "modal/communities/slide-1-mindspace.html" . -}}
+	</template>
+	<template class="js-project-modal-slide" id="modal-community-2">
+		{{- partial "modal/communities/slide-2-thinkbiz.html" . -}}
+	</template>
+</div>

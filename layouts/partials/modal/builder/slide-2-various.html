@@ -1,0 +1,4 @@
+{{- $gsu := partial "modal/builder/bodies/gsu.html" . -}}
+{{- partial "modal/project-band.html" (dict "content" $gsu) -}}
+{{- $pb := partial "modal/builder/bodies/partybuzz.html" . -}}
+{{- partial "modal/project-band.html" (dict "content" $pb) -}}

@@ -1,4 +1,42 @@
-// Project detail modal: HTML injected from web-projects-modal-content.js or communities-modal-content.js, video playback inside the modal, list-row previews, prev/next navigation, and mobile drag-to-close.
+// Project detail modal: slide HTML comes from inert <template class="js-project-modal-slide"> inside #project-modal-templates (see modal/*-modal-templates.html).
+
+// Whitelist window keys we may assign from data-modal-content-key (add an entry when you add a new page type that ships its own templates).
+var PROJECT_MODAL_CONTENT_KEYS = {
+	communitiesModalContent: true,
+	webProjectsModalContent: true
+};
+
+(function hydrateProjectModalFromTemplates() {
+
+	var $root = $('#project-modal-templates');
+	if (!$root.length)
+		return;
+
+	var key = $root.attr('data-modal-content-key');
+	if (!key || !PROJECT_MODAL_CONTENT_KEYS[key])
+		return;
+
+	// Bundle already provided (e.g. future inline script) — do not overwrite
+	if (window[key])
+		return;
+
+	var out = [];
+	// Document order === carousel index === data-project on each row; append new <template class="js-project-modal-slide"> in Hugo — no JS list to update
+	$root.find('template.js-project-modal-slide').each(function () {
+		var el = this;
+		if (el.tagName !== 'TEMPLATE')
+			return;
+		var frag = el.content;
+		if (!frag || !frag.childNodes.length)
+			return;
+		var $tmp = $('<div>');
+		$tmp.append(frag.cloneNode(true));
+		out.push($tmp.html());
+	});
+
+	if (out.length)
+		window[key] = out;
+})();
 
 $(function () {
 

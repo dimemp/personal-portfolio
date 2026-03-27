@@ -1,0 +1,14 @@
+{{- /*
+	Modal HTML for builder page: same contract as communities-modal-templates (see there).
+*/ -}}
+<div id="project-modal-templates" class="js-project-modal-templates" hidden aria-hidden="true" data-modal-content-key="webProjectsModalContent">
+	<template class="js-project-modal-slide" id="modal-builder-0">
+		{{- partial "modal/builder/slide-0-brandseal.html" . -}}
+	</template>
+	<template class="js-project-modal-slide" id="modal-builder-1">
+		{{- partial "modal/builder/slide-1-founderhood.html" . -}}
+	</template>
+	<template class="js-project-modal-slide" id="modal-builder-2">
+		{{- partial "modal/builder/slide-2-various.html" . -}}
+	</template>
+</div>

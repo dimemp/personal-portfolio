@@ -17,15 +17,6 @@ window.hugoStaticURL = function (path) {
 {{- with .File }}{{- $base = .ContentBaseName }}{{- end }}
 {{- $isBuilder := or (eq .Type "builder") (eq $base "builder") (strings.HasSuffix $rel "/builder") }}
 {{- $isCommunities := or (eq .Type "communities") (eq $base "communities") (strings.HasSuffix $rel "/communities") }}
-{{- if $isBuilder }}
-    {{- with resources.Get "js/web-projects-modal-content.js" }}
-        {{- $bundleList = $bundleList | append . }}
-    {{- end }}
-{{- else if $isCommunities }}
-    {{- with resources.Get "js/communities-modal-content.js" }}
-        {{- $bundleList = $bundleList | append . }}
-    {{- end }}
-{{- end }}
 {{- if or $isBuilder $isCommunities }}
     {{- with resources.Get "js/project-modal.js" }}
         {{- $bundleList = $bundleList | append . }}

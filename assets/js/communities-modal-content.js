@@ -13,7 +13,7 @@ const variousCommunitiesContent = `
 
 			<div class="px-3 px-lg-4 my-5">
 				<h6 class="fs-09 text-muted">Mar 2019 - Present</h6>
-				<h3 class="mb-4">Fellow at Sigma Squared</h3>
+				<h5 class="mb-4">Fellow - Sigma Squared</h5>
 			</div>
 
 			<div class="w-100 position-relative p-2">
@@ -78,7 +78,7 @@ const variousCommunitiesContent = `
 
 			<div class="px-3 px-lg-4 my-5">
 				<h6 class="fs-09 text-muted">Feb 2023 - Feb 2026</h6>
-				<h3 class="mb-4">Founding board member of La French Tech Athens</h3>
+				<h5 class="mb-4">Founding board member - La French Tech Athens</h5>
 			</div>
 
 			<div class="w-100 position-relative p-2">
@@ -136,7 +136,7 @@ const variousCommunitiesContent = `
 
 			<div class="px-3 px-lg-4 my-5">
 				<h6 class="fs-09 text-muted">Feb 2023 - Feb 2026</h6>
-				<h3 class="mb-4">Co-initiator Startup Universe</h3>
+				<h5 class="mb-4">Co-initiator - Startup Universe</h5>
 			</div>
 
 			<div class="w-100 position-relative p-2">
@@ -194,7 +194,7 @@ const variousCommunitiesContent = `
 
 			<div class="px-3 px-lg-4 my-5">
 				<h6 class="fs-09 text-muted">Feb 2023 - Feb 2026</h6>
-				<h3 class="mb-4">GreekTech ambassador in Greece</h3>
+				<h5 class="mb-4">Ambassador in Greece - GreekTech</h5>
 			</div>
 
 			<div class="w-100 position-relative p-2">
@@ -254,7 +254,7 @@ const mindspaceContent = `
 
 		<div class="px-3 px-lg-4 my-5">
 			<h6 class="fs-09 text-muted">Nov 2014 - Jul 2017</h6>
-			<h3 class="mb-4">Founding member Mindspace</h3>
+			<h5 class="mb-4">Founding member - Mindspace</h5>
 		</div>
 
 		<div class="w-100 position-relative p-2">
@@ -322,7 +322,7 @@ const thinkbizContent = `
 
 		<div class="px-3 px-lg-4 my-5">
 			<h6 class="fs-09 text-muted">Nov 2012 - Jun 2015</h6>
-			<h3 class="mb-4">Founding member ThinkBiz</h3>
+			<h5 class="mb-4">Founding member - ThinkBiz</h5>
 		</div>
 
 		<div class="w-100 position-relative p-2">

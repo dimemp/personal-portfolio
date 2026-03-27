@@ -14,7 +14,7 @@ var brandsealContent = `
 
 		<div class="px-3 px-lg-4 my-5">
 			<h6 class="fs-09 text-muted">Nov 2025 - Present</h6>
-			<h3 class="mb-4">Brandseal (by Wispit Ventures)</h3>
+			<h5 class="mb-4">Brandseal - Wispit Ventures</h5>
 		</div>
 
 		<div class="w-100 position-relative p-2">
@@ -133,7 +133,7 @@ var founderhoodContent = `
 
 		<div class="px-3 px-lg-4 my-5">
 			<h6 class="fs-09 text-muted">Nov 2018 - Nov 2025</h6>
-			<h3 class="mb-4">Co-founder | CTO & CPO, Founderhood</h3>
+			<h5 class="mb-4">Co-founder, CTO & CPO - Founderhood</h5>
 		</div>
 
 		<div class="w-100 position-relative p-2">
@@ -258,7 +258,7 @@ var variousWebProjectsContent = `
 
 			<div class="px-3 px-lg-4 my-5">
 				<h6 class="fs-09 text-muted">Oct 2020 - May 2022</h6>
-				<h3 class="mb-4">Initiator & tech lead | Startup Universe</h3>
+				<h5 class="mb-4">Initiator & tech lead - Startup Universe</h5>
 			</div>
 
 			<div class="w-100 position-relative p-2">
@@ -316,7 +316,7 @@ var variousWebProjectsContent = `
 
 			<div class="px-3 px-lg-4 my-5">
 				<h6 class="fs-09 text-muted">May 2015 - Dec 2016</h6>
-				<h3 class="mb-4">Co-founder (Product - Front - Design) | PartyBuzz </h3>
+				<h5 class="mb-4">Co-founder (Product - Front - Design) - PartyBuzz</h5>
 			</div>
 
 			<div class="position-relative p-2">

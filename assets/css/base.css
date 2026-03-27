@@ -15,11 +15,13 @@ body {
 /* Root & tokens */
 
 :root {
-	--bs-body-font-family: "dm-sans", Roboto, Arial, sans-serif;
+	--dd-font-heading: "instrument-sans", system-ui, sans-serif;
+	--bs-body-font-family: "figtree", system-ui, sans-serif;
 	--bs-body-font-size: 1rem;
 	--bs-body-font-weight: 400;
 	--bs-body-line-height: 1.6;
-	--bs-body-color: #262625;
+	--bs-body-color: #4A4A48;
+	--bs-secondary-color: #737371;
 	--bs-body-bg: #FBFBFB;
 	--dd-bg-dark: #f5f3f1;
 	--bs-border-radius: 0.5rem;
@@ -33,7 +35,7 @@ body {
 	--dd-border: #D5D4D3;
 	--dd-dim: #B8B7B6;
 	--dd-faded: #737271;
-	--dd-body: #262625;
+	--dd-body: #4A4A48;
 	--dd-strong: #3A3A39;
 	--dd-heading: #262625;
 	--dd-black-a04: rgba(0, 0, 0, 0.04);
@@ -71,40 +73,47 @@ body {
 
 /* Typography */
 
-h1, .h1 {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	font-family: var(--dd-font-heading);
+	color: var(--dd-heading);
 	font-weight: 500;
-	color: var(--dd-ink);
+}
+
+/* Heading scale for instrument-sans (medium) + figtree body: sizes & line-heights independent of Bootstrap’s type scale */
+
+h1, .h1 {
+	font-size: 2.125rem;
+	line-height: 1.32;
 }
 
 h2, .h2 {
-	font-weight: 500;
-	color: var(--dd-ink);
-	letter-spacing: -0.02em;
-	line-height: 1.2;
+	font-size: 1.75rem;
+	line-height: 1.34;
 }
 
 h3, .h3 {
-	font-size: 1.65rem;
-	font-weight: 500;
-	color: var(--dd-heading);
-	line-height: 1.3;
+	font-size: 1.5rem;
+	line-height: 1.38;
 }
 
 h4, .h4 {
-	font-weight: 500;
-	color: var(--dd-heading);
-	line-height: 1.35;
+	font-size: 1.25rem;
+	line-height: 1.42;
 }
 
 h5, .h5 {
-	font-weight: 500;
-	color: var(--dd-heading);
+	font-size: 1.125rem;
+	line-height: 1.45;
 }
 
 h6, .h6 {
-	font-weight: 500;
-	color: var(--dd-heading);
-	line-height: 1.3;
+	font-size: 1rem;
+	line-height: 1.52;
 }
 
 p, .body-text {
@@ -143,10 +152,16 @@ a:focus-visible {
 	text-decoration: none;
 }
 
-@media (min-width: 1200px) {
-	
-	h3, .h3 {
-		font-size: 1.65rem;
+@media (max-width: 767.98px) {
+
+	h1, .h1 {
+		font-size: 1.875rem;
+		line-height: 1.34;
+	}
+
+	h2, .h2 {
+		font-size: 1.5rem;
+		line-height: 1.38;
 	}
 
 }

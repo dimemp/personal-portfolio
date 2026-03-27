@@ -26,6 +26,11 @@ window.hugoStaticURL = function (path) {
         {{- $bundleList = $bundleList | append . }}
     {{- end }}
 {{- end }}
+{{- if or $isBuilder $isCommunities }}
+    {{- with resources.Get "js/project-modal.js" }}
+        {{- $bundleList = $bundleList | append . }}
+    {{- end }}
+{{- end }}
 {{- with resources.Get "js/script.js" }}
     {{- $bundleList = $bundleList | append . }}
 {{- end }}

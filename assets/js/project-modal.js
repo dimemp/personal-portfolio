@@ -6,12 +6,15 @@ var PROJECT_MODAL_CONTENT_KEYS = {
 	webProjectsModalContent: true
 };
 
+// Runs at parse time so window.* is ready before $(function () { … }) reads projectModalContent
 (function hydrateProjectModalFromTemplates() {
 
+	// Wrapper only exists on pages that embed modal slide templates (communities / builder)
 	var $root = $('#project-modal-templates');
 	if (!$root.length)
 		return;
 
+	// Which global array to fill — must match an entry in PROJECT_MODAL_CONTENT_KEYS (trusted markup only)
 	var key = $root.attr('data-modal-content-key');
 	if (!key || !PROJECT_MODAL_CONTENT_KEYS[key])
 		return;
@@ -20,22 +23,30 @@ var PROJECT_MODAL_CONTENT_KEYS = {
 	if (window[key])
 		return;
 
+	// Serialized slide HTML in the same order as .project-split-row data-project indices
 	var out = [];
-	// Document order === carousel index === data-project on each row; append new <template class="js-project-modal-slide"> in Hugo — no JS list to update
+
+	// Document order === carousel index === data-project on each row; add another <template class="js-project-modal-slide"> in Hugo — no JS list to update
 	$root.find('template.js-project-modal-slide').each(function () {
 		var el = this;
-		if (el.tagName !== 'TEMPLATE')
-			return;
+
+		// Get the content of the template
 		var frag = el.content;
+
+		// Skip empty templates so sparse markup does not create blank carousel steps
 		if (!frag || !frag.childNodes.length)
 			return;
+
+		// Clone fragment into a throwaway div, then read innerHTML — same shape $.fn.html expects later
 		var $tmp = $('<div>');
 		$tmp.append(frag.cloneNode(true));
 		out.push($tmp.html());
 	});
 
+	// Avoid assigning an empty array when every template was skipped
 	if (out.length)
 		window[key] = out;
+
 })();
 
 $(function () {
@@ -55,8 +66,14 @@ $(function () {
 	// Raw element for Bootstrap APIs that expect a DOM node
 	var modalEl = $modal[0],
 
-		// String array of HTML chunks based on the builder or communities bundle
-		projectModalContent = window.communitiesModalContent || window.webProjectsModalContent,
+		// Slide HTML strings: same global name as #project-modal-templates[data-modal-content-key] (filled by hydrateProjectModalFromTemplates)
+		projectModalContent = (function () {
+			var k = $('#project-modal-templates').attr('data-modal-content-key');
+			if (!k || !PROJECT_MODAL_CONTENT_KEYS[k])
+				return null;
+			var arr = window[k];
+			return arr && arr.length ? arr : null;
+		})(),
 
 		// True when we have at least one slide and a place to inject it
 		hasProjectModalContent = !!(projectModalContent && projectModalContent.length),
@@ -375,10 +392,10 @@ $(function () {
 		// If there is project modal content
 		if (hasProjectModalContent) {
 
-			// HTML string for this project (from bundled arrays)
+			// HTML string for this slide (from hydrated <template> list)
 			var content = projectModalContent[index];
 
-			// Skip html() if bundle returned empty (should not happen)
+			// Skip html() if this index has no string (should not happen when in sync with templates)
 			if (content)
 				$modalContent.html(content);
 
@@ -633,7 +650,7 @@ $(function () {
 		// Skip if there is no project modal content
 		if (!hasProjectModalContent) return;
 
-		// Number of slides from the injected bundle
+		// Number of slides from the hydrated template list
 		var len = projectModalContent.length,
 			idx = (currentProjectIndex + delta + len) % len;
 

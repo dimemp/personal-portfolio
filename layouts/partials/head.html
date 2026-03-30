@@ -8,6 +8,10 @@
     {{- $ogW := .Params.og_image_width | default .Site.Params.og_image_width -}}
     {{- $ogH := .Params.og_image_height | default .Site.Params.og_image_height -}}
     {{- $ogAlt := .Params.og_image_alt | default .Site.Params.og_image_alt | default $seoTitle -}}
+    {{- $ogSquare := .Params.og_image_square | default .Site.Params.og_image_square | default "open_graph_dimosiaris_square_image.png" -}}
+    {{- $ogSquareAbs := $ogSquare | absURL -}}
+    {{- $ogSquareW := .Params.og_image_square_width | default .Site.Params.og_image_square_width -}}
+    {{- $ogSquareH := .Params.og_image_square_height | default .Site.Params.og_image_square_height -}}
     <meta name="description" content="{{ $pageDesc }}">
     <meta name="author" content="{{ .Site.Params.author | default `Dimitris Dimosiaris` }}">
     <link rel="canonical" href="{{ .Permalink }}">
@@ -20,10 +24,15 @@
     {{- with $ogW }}<meta property="og:image:width" content="{{ . }}">{{ end -}}
     {{- with $ogH }}<meta property="og:image:height" content="{{ . }}">{{ end -}}
     <meta property="og:image:alt" content="{{ $ogAlt }}">
+    <meta property="og:image" content="{{ $ogSquareAbs }}">
+    {{- with $ogSquareW }}<meta property="og:image:width" content="{{ . }}">{{ end -}}
+    {{- with $ogSquareH }}<meta property="og:image:height" content="{{ . }}">{{ end -}}
+    <meta property="og:image:alt" content="{{ $ogAlt }}">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ $ogImageAbs }}">
+    <meta name="twitter:image:alt" content="{{ $ogAlt }}">
     <meta name="twitter:title" content="{{ $seoTitle }}">
     <meta name="twitter:description" content="{{ $pageDesc }}">
-    <meta name="twitter:image" content="{{ $ogImageAbs }}">
     <title>{{ $seoTitle }}</title>
     <link rel="icon" href="{{ "favicon_white.svg" | relURL }}" type="image/svg+xml" sizes="any" media="(prefers-color-scheme: dark)">
     <link rel="icon" href="{{ "dimosiaris_favicon.svg" | relURL }}" type="image/svg+xml" sizes="any" media="(prefers-color-scheme: light)">

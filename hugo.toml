@@ -1,6 +1,6 @@
 baseURL = 'https://dimosiaris.com/'
 locale = 'en-us'
-title = 'Dimitris Dimosiaris | Personal Portfolio and Website'
+title = 'Dimitris Dimosiaris | Product Designer & Engineer | Community Builder'
 
 # No tag/category pages; avoids "no layout for taxonomy" warnings.
 disableKinds = ['taxonomy', 'term']
@@ -8,13 +8,16 @@ disableKinds = ['taxonomy', 'term']
 enableRobotsTXT = true
 
 [params]
-description = "Dimitris Dimosiaris — Personal Portfolio & Website"
+description = "Product Designer & Engineer with 10+ years spent shipping web products and building high-impact founder communities from the ground up."
 author = 'Dimitris Dimosiaris'
-job_title = 'Product builder, community leader, and engineer'
+job_title = 'Product Designer & Engineer and Community Builder'
 og_image = 'open_graph_dimosiaris_image.png'
 og_image_width = 1200
 og_image_height = 630
-og_image_alt = 'Dimitris Dimosiaris — Personal Portfolio & Website image'
+og_image_alt = 'Dimitris Dimosiaris, shipping web products and building startup communities image'
+og_image_square = 'open_graph_dimosiaris_square_image.png'
+og_image_square_width = 1000
+og_image_square_height = 1000
 same_as = [
   'https://www.linkedin.com/in/dimitrisdimosiaris',
   'https://github.com/dimemp',

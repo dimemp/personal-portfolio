@@ -146,6 +146,10 @@ a {
 	transition: text-decoration 0.2s, color 0.2s;
 }
 
+.text-wrap-normal {
+	text-wrap: wrap;
+}
+
 a:hover,
 a:focus,
 a:focus-visible {
